@@ -20,6 +20,7 @@
   "dependencies": {
     "ReconnectingWebSocket": "git+https://github.com/joewalnes/reconnecting-websocket.git",
     "alt": "~0.17.8",
+    "assign": "^0.1.7",
     "bigi": "1.1.0",
     "bs58": "2.0.0",
     "bytebuffer": "^5.0.0",
@@ -30,6 +31,7 @@
     "lodash": "^3.10.1",
     "lzma": "2.1.6",
     "numeral": "^1.5.3",
+    "phantomjs-prebuilt": "2.1.5",
     "qr-image": "3.1.0",
     "react": "^0.14.4",
     "react-dom": "^0.14.4",
