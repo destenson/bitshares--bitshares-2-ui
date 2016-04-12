@@ -83,7 +83,7 @@ class AccountOverview extends React.Component {
                     {/*<td style={{textAlign: "right"}}><MarketLink.ObjectWrapper object={balance}></MarketLink.ObjectWrapper></td>*/}
                     <td style={{textAlign: "right"}}><BalanceValueComponent balance={balance} toAsset={preferredUnit}/></td>
                     <td style={{textAlign: "right"}}><BalanceComponent balance={balance} asPercentage={true}/></td>
-                    <td style={{textAlign: "right"}}><div onClick={this._hideAsset.bind(this, asset_type, includeAsset)} className="button outline">{includeAsset ? "-" : "+"}</div></td>
+                    <td style={{textAlign: "right"}}><div onClick={this._hideAsset.bind(this, asset_type, includeAsset)} className="button outline">{includeAsset ? "—" : "+"}</div></td>
                 </tr>
             );
         })
