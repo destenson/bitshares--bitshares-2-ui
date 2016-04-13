@@ -24,7 +24,7 @@ let lastLookup = new Date();
 class MarketGroup extends React.Component {
 
     static defaultProps = {
-        maxRows: 20
+        maxRows: 200
     };
 
     constructor(props) {
@@ -551,7 +551,7 @@ class MyMarkets extends React.Component {
             }).filter(a => {
                 return a !== null;
             })
-            .take(activeTab === "starred" ? 100 : 20)
+            .take(activeTab === "starred" ? 60 : 35)
             .toArray();
         }
 
@@ -610,7 +610,7 @@ class MyMarkets extends React.Component {
                             columns={columns}
                             markets={baseGroups[base]}
                             base={base}
-                            maxRows={activeTab === "starred" ? 20 : 10}
+                            maxRows={activeTab === "starred" ? 60 : 35}
                             forceOpen={activeTab === "all"}
                         />
                     })}
@@ -625,7 +625,7 @@ class MyMarkets extends React.Component {
                         columns={columns}
                         markets={otherMarkets}
                         base="others"
-                        maxRows={activeTab === "starred" ? 20 : 10}
+                        maxRows={activeTab === "starred" ? 60 : 35}
                         forceOpen={activeTab === "all"}
                     />
                 </div>
