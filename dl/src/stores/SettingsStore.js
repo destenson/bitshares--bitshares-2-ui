@@ -37,7 +37,7 @@ class SettingsStore {
 
         this.hiddenAssets = Immutable.List([]);
 
-        this.preferredBases = Immutable.List([CORE_ASSET, "BTC", "USD", "CNY"]);
+        this.preferredBases = Immutable.List([CORE_ASSET, "BTC", "USD", "OPEN.ETH", "DAI", "MKR"]);
         this.baseOptions = [CORE_ASSET, "BTC", "USD", "CNY", "OPEN.BTC", "OPEN.USD"];
 
         this.starredMarkets = Immutable.Map([
@@ -292,7 +292,7 @@ class SettingsStore {
     // onChangeBase(payload) {
     //     if (payload.index && payload.value) {
     //         this.preferredBases = this.preferredBases.set(payload.index, payload.value);
-    //         ss.set("preferredBases", this.preferredBases.toArray);                    
+    //         ss.set("preferredBases", this.preferredBases.toArray);
     //     }
     // }
 }
