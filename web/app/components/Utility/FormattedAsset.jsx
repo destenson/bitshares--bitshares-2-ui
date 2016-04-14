@@ -32,7 +32,8 @@ class FormattedAsset extends React.Component {
         hide_asset: PropTypes.bool,
         hide_amount: PropTypes.bool,
         asPercentage: PropTypes.bool,
-        assetInfo: PropTypes.node
+        assetInfo: PropTypes.node,
+        withTooltip: PropTypes.bool
     };
 
     static defaultProps = {
@@ -41,7 +42,8 @@ class FormattedAsset extends React.Component {
         hide_asset: false,
         hide_amount: false,
         asPercentage: false,
-        assetInfo: null
+        assetInfo: null,
+        withTooltip: false
     };
 
     static contextTypes = {
@@ -65,7 +67,7 @@ class FormattedAsset extends React.Component {
     }
 
     render() {
-        let {amount, decimalOffset, color, asset, hide_asset, hide_amount, asPercentage} = this.props;
+        let {amount, decimalOffset, color, asset, hide_asset, hide_amount, asPercentage, withTooltip} = this.props;
 
         if( asset && asset.toJS ) asset = asset.toJS();
 
@@ -122,13 +124,12 @@ class FormattedAsset extends React.Component {
                         onOuterAction={this.closePopover}
                         body={currency_popover_body}
                     >
-                        <span className="currency click-for-help" onClick={this.togglePopover}><AssetName name={asset.symbol} /></span>
+                        <span className="currency click-for-help" onClick={this.togglePopover}><AssetName name={asset.symbol} withTooltip={withTooltip} /></span>
                     </Popover></span>) :
-                    <span className="currency" onClick={this.togglePopover}> <AssetName name={asset.symbol} /></span>)} 
+                    <span className="currency" onClick={this.togglePopover}> <AssetName name={asset.symbol} withTooltip={withTooltip} /></span>)}
                 </span>
         );
     }
 }
 
 export default FormattedAsset;
-

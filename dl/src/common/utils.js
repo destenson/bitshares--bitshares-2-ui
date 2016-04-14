@@ -477,7 +477,7 @@ var Utils = {
 
     replaceName(name, isBitAsset = false) {
         let toReplace = ["TRADE.", "OPEN.", "METAEX."];
-        let suffix = "*";
+        let suffix = "";
 
         for (let i = 0; i < toReplace.length; i++) {
             if (name.indexOf(toReplace[i]) !== -1) {
@@ -487,6 +487,13 @@ var Utils = {
         }
 
         return name;
+    },
+
+    htmlify(text) {
+        // TODO: make this more robust
+        return text.replace(/\n{2}/g, '&nbsp;</p><p>')
+                   .replace(/\n/g, '&nbsp;<br />')
+                   ;
     }
 };
 

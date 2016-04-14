@@ -14,44 +14,31 @@ class AssetName extends React.Component {
 	};
 
 	static defaultProps = {
-		replace: true
+		replace: true,
+		withTooltip: false
 	};
 
 	shouldComponentUpdate(nextProps) {
 		return (
+			nextProps.withTooltip !== this.props.withTooltip ||
 			nextProps.replace !== this.props.replace ||
 			nextProps.name !== this.props.replace
 		);
 	}
 
 	render() {
-		let {name, replace, asset} = this.props;
+		let {name, replace, asset, withTooltip} = this.props;
 
-		let isBitAsset = asset.has("bitasset");
-		let isPredMarket = isBitAsset && asset.getIn(["bitasset", "is_prediction_market"]);
-
-		let {name: replacedName, prefix} = utils.replaceName(name, isBitAsset && !isPredMarket && asset.get("issuer") === "1.2.0");
-		// let prefix = isBitAsset && !isPredMarket ? <span>bit</span> :
-		// 			 replacedName !== this.props.name ? <span>{replacedPrefix}</span> : null;
-
-		if (replace && replacedName !== this.props.name) {
+		let replacedName = utils.replaceName(name);
+		let dispName = replace ? replacedName : name;
+		if (withTooltip) {
 			let desc = asset_utils.parseDescription(asset.getIn(["options", "description"]));
-			let tooltip = `<div><strong>${this.props.name}</strong><br />${desc.short ? desc.short : desc.main}</div>`;
-			return (
-				<span
-					className="tooltip"
-					data-tip={tooltip}
-					data-place="bottom"
-					data-type="light"
-					data-html
-				>
-					{prefix}<span>{replacedName}</span>
-				</span>
-			);
+			desc = utils.htmlify(desc.short || desc.main);
+			let tooltip = `<div><strong>${this.props.name}</strong><br />${desc}</div>`;
+			return <span className="tooltip" data-tip={tooltip} data-place="bottom" data-type="light" data-html>{dispName}</span>
 		} else {
-			return <span>{prefix}<span>{name}</span></span>
+			return <span>{dispName}</span>;
 		}
-
 	}
 }
 
