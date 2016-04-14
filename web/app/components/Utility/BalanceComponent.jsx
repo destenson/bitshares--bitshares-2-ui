@@ -14,13 +14,14 @@ class BalanceComponent extends React.Component {
 
     static propTypes = {
         balance: ChainTypes.ChainObject.isRequired,
-        assetInfo: React.PropTypes.node
+        assetInfo: React.PropTypes.node,
+        withTooltip: React.PropTypes.bool
     }
 
     render() {
         let amount = Number(this.props.balance.get('balance'));
         let type = this.props.balance.get('asset_type');
-        return (<FormattedAsset amount={amount} asset={type} asPercentage={this.props.asPercentage} assetInfo={this.props.assetInfo}/>);
+        return (<FormattedAsset amount={amount} asset={type} asPercentage={this.props.asPercentage} assetInfo={this.props.assetInfo} withTooltip={this.props.withTooltip}/>);
     }
 }
 

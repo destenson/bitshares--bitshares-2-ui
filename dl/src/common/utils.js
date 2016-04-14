@@ -477,18 +477,22 @@ var Utils = {
     replaceName(name, isBitAsset = false) {
         let toReplace = ["TRADE.", "OPEN.", "METAEX."];
         let suffix = "";
-        let i;
-        for (i = 0; i < toReplace.length; i++) {
+
+        for (let i = 0; i < toReplace.length; i++) {
             if (name.indexOf(toReplace[i]) !== -1) {
                 name = name.replace(toReplace[i], "") + suffix;
                 break;
             }
         }
 
-        return {
-            name,
-            prefix: isBitAsset ? "bit" : toReplace[i] ? toReplace[i].toLowerCase() : null
-        };
+        return name;
+    },
+
+    htmlify(text) {
+        // TODO: make this more robust
+        return text.replace(/\n{2}/g, '&nbsp;</p><p>')
+                   .replace(/\n/g, '&nbsp;<br />')
+                   ;
     }
 };
 
