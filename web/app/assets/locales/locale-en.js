@@ -10,7 +10,7 @@
 
     },
     header: {
-        title: "Graphene UI",
+        title: "BitShares 2.0",
         account: "Account",
         dashboard: "Dashboard",
         explorer: "Explore",
@@ -31,7 +31,7 @@
     propose: "Propose",
     cancel: "Cancel",
     account: {
-        welcome: "Welcome to Graphene",
+        welcome: "Welcome to BitShares 2.0",
         asset: "Asset",
         market_value: "Market Value",
         hour_24: "24hr Change",
@@ -685,7 +685,7 @@
         reset: "Reset settings"
     },
     footer: {
-        title: "Graphene",
+        title: "BitShares 2.0",
         block: "Head block",
         loading: "Loading...",
         backup: "Backup Required",

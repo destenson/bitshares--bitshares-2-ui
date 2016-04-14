@@ -28,7 +28,7 @@ class SettingsStore {
         });
 
         this.viewSettings =  Immutable.Map({
-            cardView: true
+            cardView: false
         });
 
         this.marketDirections = Immutable.Map({

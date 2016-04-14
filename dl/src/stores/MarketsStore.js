@@ -43,7 +43,7 @@ class MarketsStore {
         this.bucketSize = this._getBucketSize();
         this.priceHistory = [];
         this.lowestCallPrice = null;
-        this.marketBase = "CORE";
+        this.marketBase = "BTS";
         this.marketStats = Immutable.Map({
             change: 0,
             volumeBase: 0,
@@ -54,7 +54,7 @@ class MarketsStore {
 
         this.baseAsset = {
             id: "1.3.0",
-            symbol: "CORE",
+            symbol: "BTS",
             precision: 5
         };
 
@@ -156,6 +156,10 @@ class MarketsStore {
             // console.log("switch active market from", this.activeMarket, "to", result.market);
             this.activeMarket = result.market;
             this.onClearMarket();
+        }
+
+        if (result.buckets) {
+            this.buckets = result.buckets;
         }
 
         if (result.buckets) {
