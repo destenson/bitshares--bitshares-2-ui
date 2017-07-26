@@ -45,7 +45,7 @@ class AssetName extends React.Component {
 					data-type="light"
 					data-html
 				>
-					<span className="asset-prefix-replaced">{prefix}</span><span>{replacedName}</span>
+					{prefix}<span>{replacedName}</span>
 				</span>
 			);
 		} else {
