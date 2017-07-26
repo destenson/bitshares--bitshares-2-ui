@@ -58,6 +58,7 @@ class SettingsStore {
             ["METAFEES_"+ CORE_ASSET, {"quote": "METAFEES","base": CORE_ASSET}],
             ["OBITS_"+ CORE_ASSET, {"quote": "OBITS","base": CORE_ASSET}],
             ["OPEN.ETH_"+ CORE_ASSET, {"quote": "OPEN.ETH","base": CORE_ASSET}],
+            ["MKR_"+ CORE_ASSET, {"quote": "MKR","base": CORE_ASSET}],
 
             // BTC BASE
             ["TRADE.BTC_BTC", {"quote":"TRADE.BTC","base": "BTC"} ],
@@ -81,6 +82,7 @@ class SettingsStore {
             // OTHERS
             ["OPEN.EUR_EUR", {"quote": "OPEN.EUR","base": "EUR"}],
             ["METAEX.ETH_OPEN.ETH", {"quote": "METAEX.ETH","base": "OPEN.ETH"}]
+            ["MKR_OPEN.BTC", {"quote": "MKR","base": "OPEN.BTC"}]
 
         ]);
 
