@@ -1,32 +1,49 @@
 import React from "react";
-import {Link} from "react-router";
+import {Link} from "react-router/es";
 import Translate from "react-translate-component";
-import FormattedAsset from "../Utility/FormattedAsset";
-import LoadingIndicator from "../LoadingIndicator";
-import ChainStore from "api/ChainStore";
+import {ChainStore} from "bitsharesjs/es";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import Statistics from "./Statistics";
 import AccountActions from "actions/AccountActions";
-import Icon from "../Icon/Icon";
 import TimeAgo from "../Utility/TimeAgo";
 import HelpContent from "../Utility/HelpContent";
-import utils from "common/utils";
-import WalletActions from "actions/WalletActions";
 import accountUtils from "common/account_utils";
 
-@BindToChainState({keep_updating:true})
+class FeeHelp extends React.Component {
+    static propTypes = {
+        dprops: ChainTypes.ChainObject.isRequired
+    };
+    static defaultProps = {
+        dprops: "2.1.0"
+    };
+
+    render() {
+        let {dprops} = this.props;
+
+        return (
+            <HelpContent
+                {...this.props}
+                path="components/AccountMembership"
+                section="fee-division"
+                nextMaintenanceTime={{time: dprops.get("next_maintenance_time")}}
+            />
+        );
+    }
+}
+FeeHelp = BindToChainState(FeeHelp);
+
 class AccountMembership extends React.Component {
 
     static propTypes = {
         account: ChainTypes.ChainAccount.isRequired,
         gprops: ChainTypes.ChainObject.isRequired,
-        dprops: ChainTypes.ChainObject.isRequired
-    }
+        core_asset: ChainTypes.ChainAsset.isRequired
+    };
     static defaultProps = {
         gprops: "2.0.0",
-        dprops: "2.1.0"
-    }
+        core_asset: "1.3.0"
+    };
 
     upgradeAccount(id, lifetime, e) {
         e.preventDefault();
@@ -39,9 +56,7 @@ class AccountMembership extends React.Component {
 
     render() {
 
-        console.log("location", window.location.origin);
-        let gprops = this.props.gprops;
-        let dprops = this.props.dprops;
+        let {gprops, core_asset} = this.props;
 
         let account = this.props.account.toJS();
 
@@ -51,7 +66,7 @@ class AccountMembership extends React.Component {
         if( ref ) account.referrer_name = ref.get('name');
         let reg = ChainStore.getAccount( account.registrar );
         if( reg ) account.registrar_name = reg.get('name');
-       
+
         let account_name = account.name;
 
         let network_fee  = account.network_fee_percentage/100;
@@ -60,8 +75,9 @@ class AccountMembership extends React.Component {
         let referrer_fee  = referrer_total_fee * account.referrer_rewards_percentage/10000;
         let registrar_fee = 100 - referrer_fee - lifetime_fee - network_fee;
 
-        gprops = gprops.toJS();
-        dprops = dprops.toJS();
+        let lifetime_cost = gprops.getIn(["parameters", "current_fees", "parameters", 8, 1, "membership_lifetime_fee"]) * gprops.getIn(["parameters", "current_fees", "scale"]) / 10000;
+        let annual_cost = gprops.getIn(["parameters", "current_fees", "parameters", 8, 1, "membership_annual_fee"]) * gprops.getIn(["parameters", "current_fees", "scale"]) / 10000;
+
 
         let member_status = ChainStore.getAccountMemberStatus(this.props.account);
         let membership = "account.member." + member_status;
@@ -74,10 +90,6 @@ class AccountMembership extends React.Component {
         else if( expiration_date === "1970-01-01T00:00:00" )
            expiration_date = "N/A"
 
-        let core_asset = ChainStore.getAsset("1.3.0");
-        let lifetime_cost = gprops.parameters.current_fees.parameters[8][1].membership_lifetime_fee*gprops.parameters.current_fees.scale/10000;
-        let annual_cost = gprops.parameters.current_fees.parameters[8][1].membership_annual_fee*gprops.parameters.current_fees.scale/10000;
-
         return (
             <div className="grid-content" style={{overflowX: "hidden"}}>
                 <div className="content-block no-margin">
@@ -86,14 +98,11 @@ class AccountMembership extends React.Component {
                        <div>
                            <div className="large-6 medium-8">
                                <HelpContent path="components/AccountMembership" section="lifetime" feesCashback={100 - network_fee} price={{amount: lifetime_cost, asset: core_asset}}/>
-                               { member_status === "annual" ? null : (
-                                  <HelpContent path="components/AccountMembership" section="annual" feesCashback={100 - network_fee - lifetime_fee} price={{amount: annual_cost, asset: core_asset}}/>
-                               )}
-                               <div href className="button no-margin" onClick={this.upgradeAccount.bind(this, account.id, true)}>
+                               <div className="button no-margin" onClick={this.upgradeAccount.bind(this, account.id, true)}>
                                    <Translate content="account.member.upgrade_lifetime"/>
                                </div> &nbsp; &nbsp;
                                {true || member_status === "annual" ? null :
-                               <div href className="button" onClick={this.upgradeAccount.bind(this, account.id, false)}>
+                               <div className="button" onClick={this.upgradeAccount.bind(this, account.id, false)}>
                                    <Translate content="account.member.subscribe"/>
                                </div>}
                             </div>
@@ -152,18 +161,17 @@ class AccountMembership extends React.Component {
                     </div>
                     <div className="grid-block large-7">
                         <div className="grid-content">
-                            <HelpContent path="components/AccountMembership"
-                                         section="fee-division"
-                                         account={account_name}
-                                         networkFee={network_fee}
-                                         referrerFee={referrer_fee}
-                                         registrarFee={registrar_fee}
-                                         lifetimeFee={lifetime_fee}
-                                         referrerTotalFee={referrer_total_fee}
-                                         maintenanceInterval={gprops.parameters.maintenance_interval}
-                                         nextMaintenanceTime={{time: dprops.next_maintenance_time}}
-                                         vestingThreshold={{amount: gprops.parameters.cashback_vesting_threshold, asset: core_asset}}
-                                         vestingPeriod={gprops.parameters.cashback_vesting_period_seconds/60/60/24}/>
+                            <FeeHelp
+                                account={account_name}
+                                networkFee={network_fee}
+                                referrerFee={referrer_fee}
+                                registrarFee={registrar_fee}
+                                lifetimeFee={lifetime_fee}
+                                referrerTotalFee={referrer_total_fee}
+                                maintenanceInterval={gprops.getIn(["parameters", "maintenance_interval"])}
+                                vestingThreshold={{amount: gprops.getIn(["parameters", "cashback_vesting_threshold"]) , asset: core_asset}}
+                                vestingPeriod={gprops.getIn(["parameters", "cashback_vesting_period_seconds"]) /60/60/24}
+                            />
                         </div>
                     </div>
                 </div>
@@ -172,5 +180,6 @@ class AccountMembership extends React.Component {
         );
     }
 }
+AccountMembership = BindToChainState(AccountMembership);
 
 export default AccountMembership;

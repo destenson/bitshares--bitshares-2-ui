@@ -23,8 +23,14 @@
   $positive-color,
   $negative-color,
   $row-accent-color,
-  $header-color
+  $header-color,
+  $chat-text-color,
+  $input-background
   ) {
+
+  .font-secondary {
+      color: $secondary-text-color;
+  }
 
   #content-wrapper {
     @include color($primary-text-color, $bg-color);
@@ -43,11 +49,11 @@
   }
 
   label, label > span {
-    color: $secondary-text-color;
+    color: $primary-text-color;
   }
 
   // select:hover {
-  //   background-color: $panel-bg-color;;
+  //   background-color: $panel-bg-color;
   // }
 
   .label.success {
@@ -89,7 +95,7 @@
   // notification
 
   .notification {
-    @include color($primary-text-color, $super-light-panel-bg-color, true);
+    @include color($primary-text-color, $light-panel-bg-color, true);
   }
 
   .notification-dismiss {
@@ -110,6 +116,7 @@
       border-top-color: $panel-bg-color;
       &:hover {
         @include color($light-text-color, lighten($super-light-panel-bg-color, 4%));
+        // color: $link-text-color;
       }
     }
   }
@@ -229,7 +236,7 @@
   // buttons
 
   .button {
-    background-color: $button-bg-color;
+    background: $button-bg-color;
     &:hover, &:focus, &:active {
       background-color: lighten($button-bg-color, 4%) !important;
     }
@@ -250,13 +257,33 @@
     }
   }
 
-  .header .button,  header .button:active {
+  .header .button,  .header .button:active {
     background-color: $panel-bg-color !important;
+  }
+
+  .header a.button.create-account {
+    transition: color 0s !important;
+    color: $button-bg-color !important;
+    > span > svg > path {
+        fill: $button-bg-color;
+    }
+    &:hover {
+        color: lighten($button-bg-color, 10%) !important;
+        > span > svg > path {
+            fill: lighten($button-bg-color, 10%);
+        }
+    }
   }
 
   .grp-menu-item button {
     &:hover, &:focus, &:active {
-      background-color: #4c4c4c !important;
+      background-color: $light-panel-bg-color !important;
+    }
+  }
+
+  .grp-menu-item {
+    > a, .button {
+      color: $primary-text-color !important;
     }
   }
 
@@ -266,10 +293,20 @@
 
   .header-right-menu {
     a:hover {background-color: lighten($panel-bg-color, 4%);}
-    a > span { color: $secondary-text-color; }
+    a.active {background-color: lighten($panel-bg-color, 4%);}
+    li.current-account > a {
+        color: $info-color;
+        &:hover {
+            color: $info-color;
+        }
+        > span { font-weight: bold; }
+    }
     svg > path { fill: $secondary-text-color; }
-    a:hover > span { color: $primary-text-color; }
     svg:hover > path { fill: $primary-text-color; }
+  }
+
+  .settings-cog {
+      svg > path { fill: $secondary-text-color; }
   }
 
   // cards
@@ -326,7 +363,7 @@
   .block-list {
     color: $primary-text-color;
     li {
-      border-bottom: 1px solid $dark-text-color;
+      border-bottom: 1px solid $border-color;
     }
     li > a {
       color: $secondary-text-color;
@@ -336,7 +373,7 @@
       background-color: lighten($bg-color, 4%);
     }
     li:first-child {
-      border-top: 1px solid $dark-text-color;
+      border-top: 1px solid $border-color;
     }
     header {
       color: $secondary-text-color;
@@ -346,8 +383,78 @@
 
   // forms
 
+  .right-label, .left-label {
+      color: $secondary-text-color;
+
+      > span {
+          color: inherit;
+      }
+  }
+
+  div.input-wrapper {
+      > div.input-right-symbol {
+          color: $secondary-text-color;
+      }
+  }
+
+  .dropdown-wrapper {
+      > div:first-of-type {
+          color: $secondary-text-color;
+      }
+
+      ul.dropdown {
+          @include color($light-text-color, $super-light-panel-bg-color);
+          &::after {
+            border-bottom-color: $super-light-panel-bg-color;
+          }
+          > li > span {
+            color: $light-text-color;
+          }
+          /* Hover state */
+
+          li:hover span {
+              @include color($light-text-color, lighten($super-light-panel-bg-color, 4%));
+              color: $link-text-color;
+          }
+      }
+
+      &.active:after {
+          border-color: $link-text-color transparent;
+      }
+
+      &:after { /* Little arrow */
+          border-color: $secondary-text-color transparent;
+      }
+  }
+
+  .account-image {
+      .icon:hover {
+          svg path {
+              fill: darken($secondary-text-color, 5%);
+          }
+      }
+  }
+  .account-selector, .pubkey-input {
+    .account-image {
+        > canvas {
+            color: black;
+        }
+        .icon > svg path {
+            fill: $primary-text-color;
+        }
+        .icon:hover {
+            svg path {
+                fill: darken($secondary-text-color, 5%);
+            }
+        }
+      }
+  }
   .has-error, div.has-error > label, div.has-error > label > span {
     color: $error-text-color;
+  }
+
+  .has-warning, div.has-warning > label, div.has-warning > label > span {
+    color: $warning-color;
   }
 
   div.has-error > input, div.has-error > input:hover, div.has-error > input:focus {
@@ -359,16 +466,24 @@
   }
 
   input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], textarea {
-    background-color: #ddd;
+    background-color: $input-background;
+    border: 0;
+    color: $primary-text-color;
     &:hover, &:focus, &:active {
-      background-color: #ddd;
+      background-color: $input-background;
     }
     &:focus {
       border-color: #aaa;
     }
   }
 
-
+  ul.button-group.segmented {
+      > li.is-active > a {
+          background: $input-background;
+          color: $primary-text-color;
+          border-bottom: 1px solid $button-bg-color;
+      }
+  }
   // Tabs
 
   .tabs {
@@ -399,32 +514,105 @@
     }
   }
 
+  .bid-total {
+    color: $bid-color !important;
+  }
+
+  .ask-total {
+    color: $ask-color !important;
+  }
+
+  .stats .stat .negative {
+    color: $negative-color !important;
+  }
+
+  .stats .stat .positive {
+    color: $positive-color !important;
+  }
+
+  .active-bucket {
+    background-color: lighten($light-panel-bg-color, 12%) ;
+  }
+
+  .bucket-option:hover {
+    background-color: $panel-bg-color;
+  }
+
+  .buy-sell-box {
+      background-color: lighten($light-panel-bg-color, 12%);
+
+      > select {
+        background-color: lighten($light-panel-bg-color, 12%);
+        background: lighten($light-panel-bg-color, 12%) url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20width%3D%2232%22%20height%3D%2224%22%20viewBox%3D%220%200%2032%2024%22%3E%3Cpolygon%20points%3D%220%2C0%2032%2C0%2016%2C24%22%20style%3D%22fill%3A%20black%22%3E%3C/polygon%3E%3C/svg%3E") right 10px center no-repeat;
+      }
+  }
+
+
   // Account page
   .account-left-panel {
     h5 {
       color: $primary-text-color;
     }
     h6 {
-      color: $secondary-text-color;
+        font-weight: bold;
     }
     .bottom {
       border-top-color: $bg-color;
     }
+
+    .advanced-toggle > a {
+        color: $primary-text-color;
+    }
+
+    a.pay-button {
+        background-color: $bg-color;
+        color: $primary-text-color;
+
+        &:hover {
+            background-color: $light-panel-bg-color !important;
+        }
+    }
+
+    div.create-account-button {
+        background: transparent;
+        border: 2px solid $button-bg-color;
+
+        > a {
+            font-weight: bold;
+            color: $primary-text-color;
+        }
+    }
+
+
+  }
+
+  .account-info {
+      color: $primary-text-color;
+      > div.secondary {
+          > span:first-of-type {
+              color: $primary-text-color;
+          }
+
+          > span:last-of-type {
+              color: $secondary-text-color;
+          }
+      }
   }
 
   .my-account h5, .my-account h4, td.my-account {
+    font-weight: bold;
     color: $info-color;
   }
 
   .account-left-menu {
     > li > a:hover, > li > label:hover, > li select:hover {
       color: $light-text-color;
-      background-color: $panel-bg-color;
+      background-color: lighten($panel-bg-color, 5%);
     }
     > li > a.active {
       color: $light-text-color;
       background-color: lighten($panel-bg-color, 4%);
-      border-left-color: darken($button-bg-color, 4%);
+      border-right-color: darken($button-bg-color, 4%);
     }
   }
 
@@ -465,11 +653,10 @@
   }
 
   // AccountSelector component
-
+  .error-area {
+    color: $error-text-color;
+  }
   .account-selector {
-    .error-area {
-      color: $error-text-color;
-    }
     .right-label {
       color: $secondary-text-color;
     }
@@ -555,11 +742,14 @@
   }
 
   // Block List (section)
-  section input[type="text"] {
+  section.block-list input[type="text"], section.block-list input[type="password"] {
+    border-bottom: 1px solid $panel-bg-color;
     background-color: transparent;
+    color: $primary-text-color;
     &:hover, &:active, &:focus {
       color: $primary-text-color;
       background-color: transparent;
+      border-bottom: 1px solid $panel-bg-color;
     }
   }
 
@@ -632,15 +822,13 @@
     }
   }
 
-  .block-content-header {
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
-    //text-transform: uppercase;
-    @include RobotoLight;
-  }
+  // .block-content-header {
+  //   //text-transform: uppercase;
+  //   @include RobotoLight;
+  // }
 
   td.orderHistoryBid {
-   
+
     > span.price-integer, > span > span.price-integer {
       font-weight: bold;
       color: $bid-color;
@@ -663,7 +851,7 @@
 
   td.orderHistoryAsk  {
 
-    
+
     > span.price-integer, > span > span.price-integer {
       font-weight: bold;
       color: $ask-color;
@@ -677,7 +865,7 @@
   }
 
 .orderbook td.orderHistoryAsk {
-   
+
   > span.price-integer, > span > span.price-integer {
     font-weight: bold;
     color: $primary-text-color;
@@ -705,8 +893,8 @@
   }
 
   .orderbook-latest-price {
-      div {
-        background-color: #4C4C4C !important;
+      > div {
+        background-color: $panel-bg-color !important;
         border-bottom: 1px solid grey !important;
         border-top: 1px solid grey !important;
         padding: 10px 0 !important;
@@ -736,20 +924,28 @@
       color: $primary-text-color;
   }
 
+  li.stat.input {
+      &:hover {background-color: lighten($panel-bg-color, 4%);}
+  }
   .stats .stat {
     > span {
       > span:first-of-type {
         color: $primary-text-color;
       }
 
-      > span:last-of-type {
+      > span.symbol-text {
         color: #468EDE;
       }
     }
+    &.is-call {
+        >span > b {
+            color: $call-color;
+        }
+}
   }
 
   .buy-sell-box {
-      background-color: lighten($panel-bg-color, 12%);
+      background-color: $header-color;
 
       > select {
           padding: 0;
@@ -757,10 +953,14 @@
           height: 1.75rem;
           line-height: 1.75rem;
           border: none;
-          color: white;
+          color: $primary-text-color;
           background-size: 8px 8px;
-          background-color: lighten($panel-bg-color, 12%);
+          background-color: $header-color;
           font-size: 12px;
+
+          > option {
+              color: $chat-text-color;
+          }
       }
   }
 
@@ -808,21 +1008,224 @@
   .active-bucket {
     @include button-focus($primary-text-color, $panel-bg-color, 10);
   }
-   
-   
+
+
   .indicators, li.stat.clickable{
     color: $secondary-text-color;
-    &:hover{
-      @include button-focus($primary-text-color, $panel-bg-color, 10);
-    }
+    // &:hover{
+    //   @include button-focus($primary-text-color, $panel-bg-color, 10);
+    // }
   }
+
+
+  .mymarkets-tabs {
+      > li {
+          @include button-focus($secondary-text-color, $panel-bg-color, 0);
+          &:hover {
+            @include button-focus($primary-text-color, $panel-bg-color, 10);
+          }
+
+          &.active {
+              @include button-focus($primary-text-color, $panel-bg-color, 10);
+          }
+      }
+  }
+
+  .mymarkets-list {
+      border-top: 2px solid $panel-bg-color;
+  }
+
+  select.bts-select, select.native-coin-types, , select.external-coin-types {
+      color: $secondary-text-color;
+      background-color: $input-background;
+      border: 0;
+      color: $primary-text-color;
+      &:hover, &:focus, &:active {
+        background-color: $input-background;
+      }
+  }
+
 
   div.fm-container:hover {
     background-color: darken($light-panel-bg-color, 5%);
     cursor: pointer;
-   }
+  }
 
+  #chatbox {
+    .chat-text {
+      color: $chat-text-color;
+    }
+
+    .chatbox-content {
+        background-color: #ccc;
+        color: $chat-text-color;
+    }
+
+    .chatbox-title {
+      background-color: $header-color !important;
+    }
+
+    select {
+      height: 3rem;
+      font-size: 12px;
+    }
+
+    input {
+        color: $chat-text-color;
+    }
+  }
+
+  // Settings
+  .settings-menu {
+      > li {
+          &:hover {
+                background-color: darken($light-panel-bg-color, 5%);
+          }
+
+          &.active {
+                color: $link-text-color;
+          }
+
+      }
+  }
+
+  a {
+      &.order-cancel > .icon > svg {
+        > path {
+          fill : $negative-color;
+        }
+      }
+
+      &.action-plus > .icon > svg {
+        > path {
+          fill : $positive-color;
+        }
+      }
+  }
+
+    tr.margin-row {
+      > td.danger {
+          background-color: darken($alert-color, 15%) !important;
+          color: $dark-text-color;
+          font-weight: bold;
+      }
+
+      > td.warning {
+          background-color: darken($warning-color, 15%) !important;
+          color: $dark-text-color;
+          font-weight: bold;
+      }
+    }
+
+    .react-stockcharts-tooltip {
+      fill: $primary-text-color;
+    }
+    .react-stockcharts-tooltip-label {
+      fill: $link-text-color;
+    }
+
+    div.custom-dropdown-content {
+        background: $panel-bg-color;
+        color: $primary-text-color;
+        > ul > li {
+            &.clickable:hover {
+                background-color: lighten($panel-bg-color, 5%);
+            }
+            > div.clickable:hover {
+                background-color: lighten($panel-bg-color, 5%);
+            }
+        }
+    }
+
+    .blocktrades-bridge input, .blocktrades-bridge select{
+      color: $secondary-text-color;
+
+      border: 1px solid $secondary-text-color;
+      background-color: $panel-bg-color !important;
+      &.native-coin-types, &.external-coin-types {
+          background-color: transparent !important;
+      }
+      > option {
+          color: $primary-text-color;
+          background-color: $panel-bg-color !important;
+      }
+        &:hover, &:focus {
+          color: $primary-text-color;
+            //box-shadow: 1px 2px 3px #000;
+          border: 2px solid $primary-text-color;
+        }
+    }
+
+    .SimpleTrade__modal {
+        .Modal__header {
+            background-color: lighten($panel-bg-color, 5%);
+        }
+        .Modal__divider {
+            border-bottom: 2px solid #020202;
+        }
+    }
+
+    ul.dashboard-links {
+        > li.active {
+            color: $primary-text-color;
+        }
+    }
+
+    .switch input:checked + label{
+        background-color: darken($positive-color, 10%);
+        &::after {
+            border: none;
+            background-color: lighten($positive-color, 5%);
+        }
+    }
+
+    div.Account_create {
+        button.submit-button, div.backup-submit .button {
+            background-color: $warning-color;
+        }
+
+        label > a {
+            color: $secondary-text-color;
+        }
+    }
+
+    div.ok-indicator {
+        color: $secondary-text-color;
+        &.success {
+            color: $success-color;
+        }
+    }
+
+    .login-selector {
+        > div.box {
+            background-color: $panel-bg-color;
+            &:hover {
+                background-color: darken($panel-bg-color, 2%);
+            }
+            a {
+                color: $primary-text-color;
+            }
+        }
+    }
+
+    table.table > tbody > tr.in-use {
+        > td:nth-child(2) {
+            font-weight: bold;
+        }
+    }
+
+    .SimpleDepositBridge__info-row {
+        > div {
+            > div.float-right {
+                &.above-limit {
+                    color: $error-text-color;
+                }
+            }
+        }
+    }
+
+    input.my-key, td.my-key a {
+        font-weight: bold;
+        color: $info-color;
+    }
 }
-
-
-

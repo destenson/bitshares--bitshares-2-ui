@@ -1,14 +1,13 @@
 import React from "react";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
-import Immutable from "immutable";
 import utils from "common/utils";
 import Icon from "../Icon/Icon";
 import LinkToAccountById from "../Blockchain/LinkToAccountById";
 import pu from "common/permission_utils";
 import {cloneDeep} from "lodash";
+import {ChainStore} from "bitsharesjs/es";
 
-@BindToChainState()
 class AccountPermissionTree extends React.Component {
 
     static propTypes = {
@@ -22,10 +21,11 @@ class AccountPermissionTree extends React.Component {
     };
 
     render() {
-        let {account, accounts, available, availableKeys, permission, threshold} = this.props;
+        let {account, available, availableKeys, permission, threshold} = this.props;
 
         let isOK = permission.isAvailable(available);
         let isNested = permission.isNested();
+        let isMultiSig = permission.isMultiSig();
 
         let status = [];
 
@@ -37,11 +37,13 @@ class AccountPermissionTree extends React.Component {
             `${utils.get_percentage(permission.getStatus(available, availableKeys), permission.threshold)} / 100%` :
             `${permission.getStatus(available, availableKeys)} / ${permission.threshold}`;
 
+        // if (!account || typeof account === "string") return null;
+
         status.push(
             <div key={account.get("id")} style={{width: "100%", clear: "both", paddingBottom: 5}}>
                 <div
+                    className="inline-block"
                     style={{
-                        display: "inline-block",
                         paddingLeft: `${5 * this.props.indent}%`
                     }}
                 >
@@ -49,7 +51,7 @@ class AccountPermissionTree extends React.Component {
                     <LinkToAccountById subpage="permissions" account={account.get("id")} />
                 </div>
                 <div className="float-right" style={{paddingLeft: 20, marginRight: 10}}>
-                    {!isNested ? (
+                    {!isNested && !isMultiSig ? (
                     <span>
                         {isOK ? <Icon name="checkmark-circle" size="1x" className="success"/> :
                                 <Icon name="cross-circle" size="1x" className="error"/>}
@@ -62,10 +64,10 @@ class AccountPermissionTree extends React.Component {
             </div>
         );
 
-        if (permission.isNested) {
+        if (isNested || isMultiSig) {
             permission.accounts.forEach(subAccount => {
                 status.push(
-                    <AccountPermissionTree
+                    <BoundAccountPermissionTree
                         key={subAccount.id}
                         indent={this.props.indent + 1}
                         account={subAccount.id}
@@ -78,7 +80,7 @@ class AccountPermissionTree extends React.Component {
                 );
             })
 
-            if (permission.keys.length && permission.isNested()) {
+            if (permission.keys.length) {
                 permission.keys.forEach(key => {
                     status.push(
                         <KeyPermissionBranch
@@ -95,6 +97,7 @@ class AccountPermissionTree extends React.Component {
         return <div>{status}</div>;
     }
 }
+const BoundAccountPermissionTree = BindToChainState(AccountPermissionTree);
 
 class KeyPermissionBranch extends React.Component {
 
@@ -115,8 +118,8 @@ class KeyPermissionBranch extends React.Component {
         status.push(
             <div key={permission.id} style={{width: "100%", paddingBottom: 5}}>
                 <div
+                    className="inline-block"
                     style={{
-                        display: "inline-block",
                         paddingLeft: `${5 * this.props.indent}%`
                     }}
                 >
@@ -144,7 +147,7 @@ class SecondLevel extends React.Component {
 
         requiredPermissions.forEach(account => {
             status.push(
-                <AccountPermissionTree
+                <BoundAccountPermissionTree
                     key={account.id}
                     account={account.id}
                     accounts={account.accounts}
@@ -163,12 +166,11 @@ class SecondLevel extends React.Component {
     }
 }
 
-@BindToChainState({keep_updating: true})
 class FirstLevel extends React.Component {
 
     static propTypes = {
-       required: ChainTypes.ChainAccountsList,
-       available: ChainTypes.ChainAccountsList
+        required: ChainTypes.ChainAccountsList,
+        available: ChainTypes.ChainAccountsList
     };
 
     static defaultProps = {
@@ -205,7 +207,7 @@ class FirstLevel extends React.Component {
             requiredPermissions: pu.unnest(required, this.props.type),
             required,
             available
-        }); 
+        });
     }
 
     render() {
@@ -242,13 +244,13 @@ class FirstLevel extends React.Component {
         );
     }
 }
+FirstLevel = BindToChainState(FirstLevel, {keep_updating: true});
 
-@BindToChainState({keep_updating: true})
-export default class ProposalWrapper extends React.Component {
+class ProposalWrapper extends React.Component {
 
     static propTypes = {
-       proposal: ChainTypes.ChainObject.isRequired,
-       type: React.PropTypes.string.isRequired
+        proposal: ChainTypes.ChainObject.isRequired,
+        type: React.PropTypes.string.isRequired
     };
 
     static defaultProps = {
@@ -260,7 +262,7 @@ export default class ProposalWrapper extends React.Component {
         let {proposal, type} = this.props;
 
         let available = proposal.get(`available_${type}_approvals`);
-        let availableKeys = proposal.get(`available_key_approvals`);
+        let availableKeys = proposal.get("available_key_approvals");
         let required = proposal.get(`required_${type}_approvals`);
 
         return (
@@ -273,3 +275,5 @@ export default class ProposalWrapper extends React.Component {
         );
     }
 }
+
+export default BindToChainState(ProposalWrapper, {keep_updating: true});

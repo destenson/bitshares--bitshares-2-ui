@@ -18,6 +18,14 @@
   width: auto;
   min-width: 12em;
 
+  ul {
+      font-size: 14px;
+
+      a {
+          border-top: none;
+      }
+  }
+
   .no-first-element-top-border > :first-child > a {
     border-top: none;
     border-top-left-radius: 4px;
@@ -84,7 +92,7 @@ a {
 .label, .label.warning, .label.success, .label.info, .label.cancel, .label.alert {
   background-color: transparent;
   border: 1px solid #444;
-  border-radius: 1rem;
+  border-radius: 4px;
   text-transform: uppercase;
   padding: 0.3rem 0.4rem;
   font-size: 0.74rem;
@@ -116,10 +124,24 @@ a {
 
 .block-list {
   margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
   li > a {
     padding: 0.6rem;
   }
+
+  li {
+      border-top: none !important;
+
+      &.with-dropdown > select {
+          -webkit-appearance: menulist;
+          -moz-appearance: menulist;
+          appearance: menulist;
+      }
+  }
 }
+
+
 
 code {
   color: inherit;

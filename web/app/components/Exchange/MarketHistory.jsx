@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import {PropTypes} from "react";
-import {Link} from "react-router";
+import {Link} from "react-router/es";
 import Immutable from "immutable";
 import Ps from "perfect-scrollbar";
 import utils from "common/utils";
@@ -11,29 +10,18 @@ import PriceText from "../Utility/PriceText";
 import cnames from "classnames";
 import SettingsActions from "actions/SettingsActions";
 import SettingsStore from "stores/SettingsStore";
-import connectToStores from "alt/utils/connectToStores";
-import {operations} from "chain/chain_types";
+import { connect } from "alt-react";
 import TransitionWrapper from "../Utility/TransitionWrapper";
 import AssetName from "../Utility/AssetName";
+import { ChainTypes as grapheneChainTypes } from "bitsharesjs/es";
+const {operations} = grapheneChainTypes;
 
-@connectToStores
 class MarketHistory extends React.Component {
-
-    static getStores() {
-        return [SettingsStore]
-    }
-
-    static getPropsFromStores() {
-        return {
-            viewSettings: SettingsStore.getState().viewSettings
-        }
-    }
-
     constructor(props) {
         super();
         this.state = {
             activeTab: props.viewSettings.get("historyTab", "history")
-        }
+        };
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -42,17 +30,18 @@ class MarketHistory extends React.Component {
             nextProps.baseSymbol !== this.props.baseSymbol ||
             nextProps.quoteSymbol !== this.props.quoteSymbol ||
             nextProps.className !== this.props.className ||
-            nextState.activeTab !== this.state.activeTab
+            nextState.activeTab !== this.state.activeTab ||
+            nextProps.currentAccount !== this.props.currentAccount
         );
     }
 
     componentDidMount() {
-        let historyContainer = ReactDOM.findDOMNode(this.refs.history);
+        let historyContainer = this.refs.history;
         Ps.initialize(historyContainer);
     }
 
     componentDidUpdate() {
-        let historyContainer = ReactDOM.findDOMNode(this.refs.history);
+        let historyContainer = this.refs.history;
         Ps.update(historyContainer);
     }
 
@@ -78,7 +67,7 @@ class MarketHistory extends React.Component {
             let index = 0;
             let keyIndex = -1;
             let flipped = base.get("id").split(".")[2] > quote.get("id").split(".")[2];
-            historyRows = myHistory.filter(a => {            
+            historyRows = myHistory.filter(a => {
                 let opType = a.getIn(["op", 0]);
                 return (opType === operations.fill_order);
             }).filter(a => {
@@ -129,7 +118,7 @@ class MarketHistory extends React.Component {
                 index++;
                 return index % 2 === 0;
             })
-            .take(50)
+            .take(100)
             .map(order => {
                 keyIndex++;
                 let paysAsset, receivesAsset, isAsk = false;
@@ -177,8 +166,8 @@ class MarketHistory extends React.Component {
                             <thead>
                                 <tr>
                                     <th style={{width: "25%", textAlign: "center"}}><Translate className="header-sub-title" content="exchange.price" /></th>
-                                    <th style={{width: "25%", textAlign: "center"}}><span className="header-sub-title"><AssetName name={quoteSymbol} /></span></th>
-                                    <th style={{width: "25%", textAlign: "center"}}><span className="header-sub-title"><AssetName name={baseSymbol} /></span></th>
+                                    <th style={{width: "25%", textAlign: "center"}}><span className="header-sub-title"><AssetName dataPlace="top" name={quoteSymbol} /></span></th>
+                                    <th style={{width: "25%", textAlign: "center"}}><span className="header-sub-title"><AssetName dataPlace="top" name={baseSymbol} /></span></th>
                                     <th style={{width: "25%", textAlign: "center"}}><Translate className="header-sub-title" content={activeTab === "history" ? "explorer.block.date" : "explorer.block.title"} /></th>
                                 </tr>
                             </thead>
@@ -212,4 +201,13 @@ MarketHistory.propTypes = {
     history: PropTypes.object.isRequired
 };
 
-export default MarketHistory;
+export default connect(MarketHistory, {
+    listenTo() {
+        return [SettingsStore];
+    },
+    getProps() {
+        return {
+            viewSettings: SettingsStore.getState().viewSettings
+        };
+    }
+});

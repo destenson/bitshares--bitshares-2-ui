@@ -15,6 +15,7 @@ $light-panel-bg-color: #353742;
 $super-light-panel-bg-color: lighten($light-panel-bg-color, 8%);
 $button-bg-color: #4A90E2;
 $secondary-button-bg-color: #546979;
+$input-background: lighten($bg-color, 8%);
 
 $alert-color: $error-text-color;
 $info-color: #4A90E2;
@@ -30,6 +31,9 @@ $positive-color: #6EC105;
 $negative-color: #E1424A;
 $row-accent-color: #3C3C3C;
 $header-color: #484848;
+
+// Chat colors
+$chat-text-color: #191A1F;
 
 .olDarkTheme {
   @include theme(
@@ -55,6 +59,8 @@ $header-color: #484848;
     $positive-color,
     $negative-color,
     $row-accent-color,
-    $header-color
+    $header-color,
+    $chat-text-color,
+    $input-background
   );
 }

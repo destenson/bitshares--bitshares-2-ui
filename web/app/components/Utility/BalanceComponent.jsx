@@ -9,20 +9,20 @@ import BindToChainState from "./BindToChainState";
  *  Expects one property, 'balance' which should be a balance_object id
  */
 
-@BindToChainState({keep_updating: true})
 class BalanceComponent extends React.Component {
 
     static propTypes = {
         balance: ChainTypes.ChainObject.isRequired,
         assetInfo: React.PropTypes.node,
-        withTooltip: React.PropTypes.bool
+        withTooltip: React.PropTypes.bool,
+		replace: Reach.PropTypes.bool
     }
 
     render() {
         let amount = Number(this.props.balance.get('balance'));
         let type = this.props.balance.get('asset_type');
-        return (<FormattedAsset amount={amount} asset={type} asPercentage={this.props.asPercentage} assetInfo={this.props.assetInfo} withTooltip={this.props.withTooltip}/>);
+        return (<FormattedAsset amount={amount} asset={type} asPercentage={this.props.asPercentage} assetInfo={this.props.assetInfo} withTooltip={this.props.withTooltip} replace={this.props.replace} />);
     }
 }
 
-export default BalanceComponent;
+export default BindToChainState(BalanceComponent, {keep_updating: true});

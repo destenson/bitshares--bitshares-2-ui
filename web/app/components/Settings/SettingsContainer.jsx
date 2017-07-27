@@ -9,19 +9,25 @@ class SettingsContainer extends React.Component {
     render() {
 
         return (
-              <AltContainer 
+              <AltContainer
                   stores={[SettingsStore]}
                   inject={{
                     settings: () => {
                         return SettingsStore.getState().settings;
+                    },
+                    viewSettings: () => {
+                        return SettingsStore.getState().viewSettings;
                     },
                     defaults: () => {
                         return SettingsStore.getState().defaults;
                     },
                     localesObject: () => {
                         return IntlStore.getState().localesObject;
-                    }
-                  }} 
+                    },
+                    apiLatencies: () => {
+                        return SettingsStore.getState().apiLatencies;
+                    },
+                  }}
                   >
                 <Settings/>
               </AltContainer>

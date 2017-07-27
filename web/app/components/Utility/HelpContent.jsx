@@ -1,8 +1,8 @@
 import React from "react";
-import {PropTypes} from "react-router";
-import _ from "lodash";
+import {reduce, zipObject} from "lodash";
 import counterpart from "counterpart";
 import utils from "common/utils";
+import {withRouter} from "react-router";
 
 let req = require.context("../../../../help", true, /\.md/);
 let HelpData = {};
@@ -15,60 +15,65 @@ function split_into_sections(str) {
     let sections = str.split(/\[#\s?(.+?)\s?\]/);
     if (sections.length === 1) return sections[0];
     if (sections[0].length < 4) sections.splice(0, 1);
-    sections = _.reduce(sections, (result, n) => {
+    sections = reduce(sections, (result, n) => {
         let last = result.length > 0 ? result[result.length-1] : null;
         if (!last || last.length === 2) { last = [n]; result.push(last); }
         else last.push(n);
         return result;
     }, []);
-    return _.zipObject(sections);
+    return zipObject(sections);
 }
 
 function adjust_links(str) {
     return str.replace(/\<a\shref\=\"(.+?)\"/gi, (match, text) => {
-        if (text.indexOf("#/") === 0) return `<a href="${text}" onclick="_onClickLink(event)"`;
-        if (text.indexOf("http") === 0) return `<a href="${text}" target="_blank"`;
+        if (text.indexOf((__HASH_HISTORY__ ? "#" : "") + "/") === 0) return `<a href="${text}" onclick="_onClickLink(event)"`;
+        if (text.indexOf("http") === 0) return `<a href="${text}" rel="noopener noreferrer" target="_blank"`;
         let page = endsWith(text, ".md") ? text.substr(0, text.length - 3) : text;
-        let res = `<a href="/#/help/${page}" onclick="_onClickLink(event)"`;
+        let res = `<a href="${__HASH_HISTORY__ ? "#" : ""}/help/${page}" onclick="_onClickLink(event)"`;
         return res;
     });
 }
 
-req.keys().forEach(function(filename) {
-    var res = filename.match(/\/(.+?)\/(.+)\./);
-    let locale = res[1];
-    let key = res[2];
-    let help_locale = HelpData[locale];
-    if (!help_locale) HelpData[locale] = help_locale = {};
-    let content = req(filename);
-    help_locale[key] = split_into_sections(adjust_links(content));
-});
-
-//console.log("-- HelpData -->", HelpData);
+// console.log("-- HelpData -->", HelpData);
 
 class HelpContent extends React.Component {
 
     static propTypes = {
         path: React.PropTypes.string.isRequired,
         section: React.PropTypes.string
-    }
-
-    static contextTypes = {
-        history: PropTypes.history
-    }
+    };
 
     constructor(props) {
         super(props);
         window._onClickLink = this.onClickLink.bind(this);
     }
 
+    componentWillMount() {
+        let locale = this.props.locale || counterpart.getLocale() || "en";
+
+        // Only load helpData for the current locale as well as the fallback 'en'
+        req.keys().filter(a => {
+            return (
+                a.indexOf(`/${locale}/`) !== -1 ||
+                a.indexOf("/en/") !== -1
+            );
+        }).forEach(function(filename) {
+            var res = filename.match(/\/(.+?)\/(.+)\./);
+            let locale = res[1];
+            let key = res[2];
+            let help_locale = HelpData[locale];
+            if (!help_locale) HelpData[locale] = help_locale = {};
+            let content = req(filename);
+            help_locale[key] = split_into_sections(adjust_links(content));
+        });
+    }
+
     onClickLink(e) {
         e.preventDefault();
-        console.dir(e.target);
-        let path = e.target.hash.split("/").filter(p => p && p !== "#");
+        let path = (__HASH_HISTORY__ ? e.target.hash : e.target.pathname).split("/").filter(p => p && p !== "#");
         if (path.length === 0) return false;
         let route = "/" + path.join("/");
-        this.context.history.pushState(null, route);
+        this.props.router.push(route);
         return false;
     }
 
@@ -92,7 +97,7 @@ class HelpContent extends React.Component {
         }
         let value = HelpData[locale][this.props.path];
 
-        if (!value && locale != 'en') {
+        if (!value && locale !== "en") {
             console.warn(`missing path '${this.props.path}' for locale '${locale}' help files, rolling back to 'en'`);
             value = HelpData['en'][this.props.path];
         }
@@ -118,4 +123,4 @@ class HelpContent extends React.Component {
     }
 }
 
-export default HelpContent;
+export default withRouter(HelpContent);

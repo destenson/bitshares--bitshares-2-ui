@@ -1,15 +1,15 @@
 import React from "react";
 import utils from "common/utils";
-import validation from "common/validation";
 import AccountImage from "../Account/AccountImage";
 import Translate from "react-translate-component";
-import ChainStore from "api/ChainStore";
+import { ChainStore, PublicKey, ChainValidation } from "bitsharesjs/es";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import classnames from "classnames";
 import counterpart from "counterpart";
-import PublicKey from "ecc/key_public";
 import Icon from "../Icon/Icon";
+import accountUtils from "common/account_utils";
+import FloatingDropdown from "../Utility/FloatingDropdown";
 
 /**
  * @brief Allows the user to enter an account by name or #ID
@@ -19,7 +19,6 @@ import Icon from "../Icon/Icon";
  *
  */
 
-@BindToChainState({keep_updating: true})
 class AccountSelector extends React.Component {
 
     static propTypes = {
@@ -32,7 +31,8 @@ class AccountSelector extends React.Component {
         accountName: React.PropTypes.string, // the current value of the account selector, the string the user enters
         account: ChainTypes.ChainAccount, // account object retrieved via BindToChainState decorator (not input)
         tabIndex: React.PropTypes.number, // tabindex property to be passed to input tag
-        disableActionButton: React.PropTypes.bool // use it if you need to disable action button
+        disableActionButton: React.PropTypes.bool, // use it if you need to disable action button,
+        allowUppercase: React.PropTypes.bool // use it if you need to allow uppercase letters
     }
 
     // can be used in parent component: this.refs.account_selector.getAccount()
@@ -41,23 +41,29 @@ class AccountSelector extends React.Component {
     }
 
     getError() {
+
+        let scamMessage = accountUtils.isKnownScammer(this.props.accountName);
+
         let error = this.props.error;
         if (!error && this.props.accountName && !this.getNameType(this.props.accountName))
             error = counterpart.translate("account.errors.invalid");
-        return error;
+
+        return scamMessage || error;
     }
 
     getNameType(value) {
         if(!value) return null;
         if(value[0] === "#" && utils.is_object_id("1.2." + value.substring(1))) return "id";
-        if(validation.is_account_name(value, true)) return "name";
+        if(ChainValidation.is_account_name(value, true)) return "name";
         if(this.props.allowPubKey && PublicKey.fromPublicKeyString(value)) return "pubkey";
         return null;
     }
 
     onInputChanged(event) {
-        let value = event.target.value.trim(); //.toLowerCase();
-
+        let value = event.target.value.trim();
+        if (!this.props.allowUppercase) {
+            value = value.toLowerCase();
+        }
         // If regex matches "#/account/account-name/overview", parse out account-name
         let newValue = value.match(/(?:#\/account\/)(.*)(?:\/overview)/);
         if (newValue) value = newValue[1];
@@ -75,7 +81,7 @@ class AccountSelector extends React.Component {
     }
 
     componentWillReceiveProps(newProps) {
-        if(this.props.onAccountChanged && newProps.account !== this.props.account)
+        if((this.props.onAccountChanged && newProps.account) && newProps.account !== this.props.account)
             this.props.onAccountChanged(newProps.account);
     }
 
@@ -107,41 +113,51 @@ class AccountSelector extends React.Component {
         let action_class = classnames("button", {"disabled" : !(this.props.account || type === "pubkey") || error || this.props.disableActionButton});
 
         return (
-            <div className="account-selector no-overflow" style={this.props.style}>
-                {type === "pubkey" ? <div className="account-image"><Icon name="key" size="4x"/></div> :
-                <AccountImage size={{height: 80, width: 80}}
-                              account={this.props.account ? this.props.account.get('name') : null} custom_image={null}/>}
-
+            <div className="account-selector" style={this.props.style}>
                 <div className="content-area">
                     <div className="header-area">
-                        {error ? null : <div className="right-label"><span>{member_status}</span> &nbsp; <span>{lookup_display}</span></div>}
-                        <Translate component="label" content={this.props.label}/>
+                        {error ? null : <label className="right-label"><span>{member_status}</span> &nbsp; <span>{lookup_display}</span></label>}
+                        <Translate className="left-label" component="label" content={this.props.label}/>
                     </div>
                     <div className="input-area">
-                      <span className="inline-label">
-                      <input type="text"
-                             value={this.props.accountName || ""}
-                             placeholder={this.props.placeholder || counterpart.translate("account.name")}
-                             ref="user_input"
-                             onChange={this.onInputChanged.bind(this)}
-                             onKeyDown={this.onKeyDown.bind(this)}
-                             tabIndex={this.props.tabIndex}/>
-                          { this.props.children }
-                          { this.props.onAction ? (
-                              <button className={action_class}
-                                      onClick={this.onAction.bind(this)}>
-                                  <Translate content={this.props.action_label}/></button>
-                          ) : null }
-                      </span>
-                    </div>
-                    <div className="error-area">
-                        <span>{error}</span>
-                    </div>
-                </div>
+                        <div className="inline-label input-wrapper">
+                            {type === "pubkey" ? <div className="account-image"><Icon name="key" size="4x"/></div> :
+                            <AccountImage size={{height: this.props.size || 80, width: this.props.size || 80}}
+                                account={this.props.account ? this.props.account.get("name") : null} custom_image={null}/>}
+                                <input type="text"
+                                    value={this.props.accountName || ""}
+                                    placeholder={this.props.placeholder || counterpart.translate("account.name")}
+                                    ref="user_input"
+                                    onChange={this.onInputChanged.bind(this)}
+                                    onKeyDown={this.onKeyDown.bind(this)}
+                                    tabIndex={this.props.tabIndex}
+                                />
+                                {this.props.dropDownContent ? <div className="form-label select floating-dropdown">
+                                    <FloatingDropdown
+                                        entries={this.props.dropDownContent}
+                                        values={this.props.dropDownContent.reduce((map, a) => {if (a) map[a] = a; return map;}, {})}
+                                        singleEntry={this.props.dropDownContent[0]}
+                                        value={this.props.dropDownValue || ""}
+                                        onChange={this.props.onDropdownSelect}
+                                    />
+                                </div> : null}
+                                { this.props.children }
+                                { this.props.onAction ? (
+                                    <button className={action_class}
+                                        onClick={this.onAction.bind(this)}>
+                                        <Translate content={this.props.action_label}/></button>
+                                    ) : null }
+                                </div>
+                            </div>
+
+                            {error ? <div className="error-area">
+                                <span>{error}</span>
+                            </div> : null}
+                        </div>
             </div>
-        )
+        );
 
     }
-
 }
-export default AccountSelector;
+
+export default BindToChainState(AccountSelector, {keep_updating: true});
