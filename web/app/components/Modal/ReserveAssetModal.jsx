@@ -1,10 +1,10 @@
-import React from "react";
-import Translate from "react-translate-component";
-import utils from "common/utils";
-import BalanceComponent from "../Utility/BalanceComponent";
-import counterpart from "counterpart";
-import AmountSelector from "../Utility/AmountSelector";
-import AssetActions from "actions/AssetActions";
+import React from 'react';
+import Translate from 'react-translate-component';
+import utils from 'common/utils';
+import BalanceComponent from '../Utility/BalanceComponent';
+import counterpart from 'counterpart';
+import AmountSelector from '../Utility/AmountSelector';
+import AssetActions from 'actions/AssetActions';
 
 export default class ReserveAssetModal extends React.Component {
 

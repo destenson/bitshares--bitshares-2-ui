@@ -1,17 +1,17 @@
-import React from "react";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import Modal from "react-foundation-apps/src/modal";
-import Trigger from "react-foundation-apps/src/trigger";
-import Translate from "react-translate-component";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import AccountSelect from "components/Forms/AccountSelect";
-import AccountStore from "stores/AccountStore";
-import WalletDb from "stores/WalletDb";
-import WalletApi from "api/WalletApi";
-import NestedApprovalState from "../Account/NestedApprovalState";
-import pu from "common/permission_utils";
-import {ChainStore} from "bitsharesjs/es";
+import React from 'react';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import Modal from 'react-foundation-apps/src/modal';
+import Trigger from 'react-foundation-apps/src/trigger';
+import Translate from 'react-translate-component';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import AccountSelect from 'components/Forms/AccountSelect';
+import AccountStore from 'stores/AccountStore';
+import WalletDb from 'stores/WalletDb';
+import WalletApi from 'api/WalletApi';
+import NestedApprovalState from '../Account/NestedApprovalState';
+import pu from 'common/permission_utils';
+import {ChainStore} from 'bitsharesjs/es';
 
 let wallet_api = new WalletApi();
 

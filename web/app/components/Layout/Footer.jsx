@@ -1,14 +1,14 @@
-import React, {Component} from "react";
-import AltContainer from "alt-container";
-import Translate from "react-translate-component";
-import BindToChainState from "../Utility/BindToChainState";
-import ChainTypes from "../Utility/ChainTypes";
-import CachedPropertyStore from "stores/CachedPropertyStore";
-import BlockchainStore from "stores/BlockchainStore";
-import {ChainStore} from "bitsharesjs/es";
-import WalletDb from "stores/WalletDb";
-import TimeAgo from "../Utility/TimeAgo";
-import Icon from "../Icon/Icon";
+import React, {Component} from 'react';
+import AltContainer from 'alt-container';
+import Translate from 'react-translate-component';
+import BindToChainState from '../Utility/BindToChainState';
+import ChainTypes from '../Utility/ChainTypes';
+import CachedPropertyStore from 'stores/CachedPropertyStore';
+import BlockchainStore from 'stores/BlockchainStore';
+import {ChainStore} from 'bitsharesjs/es';
+import WalletDb from 'stores/WalletDb';
+import TimeAgo from '../Utility/TimeAgo';
+import Icon from '../Icon/Icon';
 
 class Footer extends React.Component {
 

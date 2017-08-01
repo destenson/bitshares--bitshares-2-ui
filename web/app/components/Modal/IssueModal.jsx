@@ -1,12 +1,12 @@
-import React from "react";
-import Translate from "react-translate-component";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import utils from "common/utils";
-import counterpart from "counterpart";
-import AssetActions from "actions/AssetActions";
-import AccountSelector from "../Account/AccountSelector";
-import AmountSelector from "../Utility/AmountSelector";
+import React from 'react';
+import Translate from 'react-translate-component';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import utils from 'common/utils';
+import counterpart from 'counterpart';
+import AssetActions from 'actions/AssetActions';
+import AccountSelector from '../Account/AccountSelector';
+import AmountSelector from '../Utility/AmountSelector';
 
 class IssueModal extends React.Component {
 

@@ -1,5 +1,6 @@
-import ls from "./localStorage";
-import {blockTradesAPIs} from "api/apiConfig";
+import ls from './localStorage';
+import {blockTradesAPIs} from 'api/apiConfig';
+
 const blockTradesStorage = new ls("");
 
 export function fetchCoins(url = (blockTradesAPIs.BASE_OL + blockTradesAPIs.COINS_LIST)) {

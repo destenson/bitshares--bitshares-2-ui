@@ -1,6 +1,6 @@
-import React from "react";
-import ChainTypes from "./ChainTypes";
-import BindToChainState from "./BindToChainState";
+import React from 'react';
+import ChainTypes from './ChainTypes';
+import BindToChainState from './BindToChainState';
 
 /**
  *  Given an account id, displays the name of that account

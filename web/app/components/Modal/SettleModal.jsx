@@ -1,17 +1,17 @@
-import React from "react";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import Modal from "react-foundation-apps/src/modal";
-import Trigger from "react-foundation-apps/src/trigger";
-import Translate from "react-translate-component";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import utils from "common/utils";
-import BalanceComponent from "../Utility/BalanceComponent";
-import WalletApi from "api/WalletApi";
-import WalletDb from "stores/WalletDb";
-import counterpart from "counterpart";
-import {ChainStore} from "bitsharesjs/es";
-import AmountSelector from "../Utility/AmountSelector";
+import React from 'react';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import Modal from 'react-foundation-apps/src/modal';
+import Trigger from 'react-foundation-apps/src/trigger';
+import Translate from 'react-translate-component';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import utils from 'common/utils';
+import BalanceComponent from '../Utility/BalanceComponent';
+import WalletApi from 'api/WalletApi';
+import WalletDb from 'stores/WalletDb';
+import counterpart from 'counterpart';
+import {ChainStore} from 'bitsharesjs/es';
+import AmountSelector from '../Utility/AmountSelector';
 
 let wallet_api = new WalletApi();
 

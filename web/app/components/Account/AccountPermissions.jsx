@@ -1,18 +1,18 @@
-import React from "react";
-import Immutable from "immutable";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
-import utils from "common/utils";
-import accountUtils from "common/account_utils";
-import WalletApi from "api/WalletApi";
-import WalletDb from "stores/WalletDb.js";
-import {PublicKey} from "bitsharesjs/es";
-import AccountPermissionsList from "./AccountPermissionsList";
-import AccountPermissionsMigrate from "./AccountPermissionsMigrate";
-import PubKeyInput from "../Forms/PubKeyInput";
-import {Tabs, Tab} from "../Utility/Tabs";
-import HelpContent from "../Utility/HelpContent";
-import { RecentTransactions } from "./RecentTransactions";
+import React from 'react';
+import Immutable from 'immutable';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
+import utils from 'common/utils';
+import accountUtils from 'common/account_utils';
+import WalletApi from 'api/WalletApi';
+import WalletDb from 'stores/WalletDb.js';
+import {PublicKey} from 'bitsharesjs/es';
+import AccountPermissionsList from './AccountPermissionsList';
+import AccountPermissionsMigrate from './AccountPermissionsMigrate';
+import PubKeyInput from '../Forms/PubKeyInput';
+import {Tab, Tabs} from '../Utility/Tabs';
+import HelpContent from '../Utility/HelpContent';
+import {RecentTransactions} from './RecentTransactions';
 
 let wallet_api = new WalletApi();
 

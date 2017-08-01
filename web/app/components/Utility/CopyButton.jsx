@@ -1,7 +1,7 @@
-import React from "react";
-import counterpart from "counterpart";
-import ClipboardButton from "react-clipboard.js";
-import Icon from "../Icon/Icon";
+import React from 'react';
+import counterpart from 'counterpart';
+import ClipboardButton from 'react-clipboard.js';
+import Icon from '../Icon/Icon';
 
 const CopyButton = ({
     className = "button",

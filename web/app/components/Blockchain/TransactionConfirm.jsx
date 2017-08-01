@@ -1,20 +1,20 @@
-import React from "react";
-import Modal from "react-foundation-apps/src/modal";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import Transaction from "./Transaction";
-import Translate from "react-translate-component";
-import TransactionConfirmActions from "actions/TransactionConfirmActions";
-import TransactionConfirmStore from "stores/TransactionConfirmStore";
-import { connect } from "alt-react";
-import Icon from "../Icon/Icon";
-import LoadingIndicator from "../LoadingIndicator";
-import WalletDb from "stores/WalletDb";
-import AccountStore from "stores/AccountStore";
-import AccountSelect from "components/Forms/AccountSelect";
-import {ChainStore} from "bitsharesjs/es";
-import utils from "common/utils";
-import Operation from "components/Blockchain/Operation";
-import notify from "actions/NotificationActions";
+import React from 'react';
+import Modal from 'react-foundation-apps/src/modal';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import Transaction from './Transaction';
+import Translate from 'react-translate-component';
+import TransactionConfirmActions from 'actions/TransactionConfirmActions';
+import TransactionConfirmStore from 'stores/TransactionConfirmStore';
+import {connect} from 'alt-react';
+import Icon from '../Icon/Icon';
+import LoadingIndicator from '../LoadingIndicator';
+import WalletDb from 'stores/WalletDb';
+import AccountStore from 'stores/AccountStore';
+import AccountSelect from 'components/Forms/AccountSelect';
+import {ChainStore} from 'bitsharesjs/es';
+import utils from 'common/utils';
+import Operation from 'components/Blockchain/Operation';
+import notify from 'actions/NotificationActions';
 
 class TransactionConfirm extends React.Component {
 

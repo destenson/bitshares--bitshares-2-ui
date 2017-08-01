@@ -1,24 +1,24 @@
-import alt from "alt-instance";
-import IntlActions from "actions/IntlActions";
-import SettingsActions from "actions/SettingsActions";
-import counterpart from "counterpart";
+import alt from 'alt-instance';
+import IntlActions from 'actions/IntlActions';
+import SettingsActions from 'actions/SettingsActions';
+import counterpart from 'counterpart';
+import ls from 'common/localStorage';
+import {addLocaleData} from 'react-intl';
+
+import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
+import fr from 'react-intl/locale-data/fr';
+import ko from 'react-intl/locale-data/ko';
+import zh from 'react-intl/locale-data/zh';
+import de from 'react-intl/locale-data/de';
+import tr from 'react-intl/locale-data/tr';
+import ru from 'react-intl/locale-data/ru';
+
 var locale_en = require("json-loader!assets/locales/locale-en");
-import ls from "common/localStorage";
 let ss = new ls("__graphene__");
 
 counterpart.registerTranslations("en", locale_en);
 counterpart.setFallbackLocale("en");
-
-import {addLocaleData} from "react-intl";
-
-import en from "react-intl/locale-data/en";
-import es from "react-intl/locale-data/es";
-import fr from "react-intl/locale-data/fr";
-import ko from "react-intl/locale-data/ko";
-import zh from "react-intl/locale-data/zh";
-import de from "react-intl/locale-data/de";
-import tr from "react-intl/locale-data/tr";
-import ru from "react-intl/locale-data/ru";
 
 addLocaleData(en);
 addLocaleData(es);

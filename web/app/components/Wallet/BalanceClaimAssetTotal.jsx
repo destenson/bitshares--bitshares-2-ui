@@ -1,8 +1,8 @@
-import React, {Component} from "react";
-import { connect } from "alt-react";
-import BalanceClaimActiveStore from "stores/BalanceClaimActiveStore";
-import FormattedAsset from "components/Utility/FormattedAsset";
-import Translate from "react-translate-component";
+import React, {Component} from 'react';
+import {connect} from 'alt-react';
+import BalanceClaimActiveStore from 'stores/BalanceClaimActiveStore';
+import FormattedAsset from 'components/Utility/FormattedAsset';
+import Translate from 'react-translate-component';
 
 class BalanceClaimAssetTotals extends Component {
     render() {

@@ -1,9 +1,9 @@
-import React from "react";
-import AccountImage from "./AccountImage";
-import Utils from "common/utils.js";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import Translate from "react-translate-component";
+import React from 'react';
+import AccountImage from './AccountImage';
+import Utils from 'common/utils.js';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import Translate from 'react-translate-component';
 
 class AccountInfo extends React.Component {
 

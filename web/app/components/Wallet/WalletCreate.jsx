@@ -1,13 +1,13 @@
-import React, {Component} from "react";
-import {Link} from "react-router";
-import Translate from "react-translate-component";
-import BrainkeyInput from "components/Wallet/BrainkeyInput";
-import PasswordConfirm from "components/Wallet/PasswordConfirm";
-import WalletDb from "stores/WalletDb";
-import WalletManagerStore from "stores/WalletManagerStore";
-import WalletActions from "actions/WalletActions";
-import { connect } from "alt-react";
-import cname from "classnames";
+import React, {Component} from 'react';
+import {Link} from 'react-router';
+import Translate from 'react-translate-component';
+import BrainkeyInput from 'components/Wallet/BrainkeyInput';
+import PasswordConfirm from 'components/Wallet/PasswordConfirm';
+import WalletDb from 'stores/WalletDb';
+import WalletManagerStore from 'stores/WalletManagerStore';
+import WalletActions from 'actions/WalletActions';
+import {connect} from 'alt-react';
+import cname from 'classnames';
 
 class CreateNewWallet extends Component {
 

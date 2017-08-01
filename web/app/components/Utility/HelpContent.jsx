@@ -1,8 +1,8 @@
-import React from "react";
-import {reduce, zipObject} from "lodash";
-import counterpart from "counterpart";
-import utils from "common/utils";
-import {withRouter} from "react-router";
+import React from 'react';
+import {reduce, zipObject} from 'lodash';
+import counterpart from 'counterpart';
+import utils from 'common/utils';
+import {withRouter} from 'react-router';
 
 let req = require.context("../../../../help", true, /\.md/);
 let HelpData = {};

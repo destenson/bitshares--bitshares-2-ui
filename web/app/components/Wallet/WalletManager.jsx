@@ -1,11 +1,11 @@
-import React, {Component} from "react";
-import {Link} from "react-router/es";
-import { connect } from "alt-react";
-import WalletActions from "actions/WalletActions";
-import WalletManagerStore from "stores/WalletManagerStore";
-import Translate from "react-translate-component";
-import cname from "classnames";
-import counterpart from "counterpart";
+import React, {Component} from 'react';
+import {Link} from 'react-router/es';
+import {connect} from 'alt-react';
+import WalletActions from 'actions/WalletActions';
+import WalletManagerStore from 'stores/WalletManagerStore';
+import Translate from 'react-translate-component';
+import cname from 'classnames';
+import counterpart from 'counterpart';
 
 const connectObject = {
     listenTo() {

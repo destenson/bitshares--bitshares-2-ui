@@ -1,18 +1,18 @@
-import React from "react";
-import {Link} from "react-router/es";
-import Translate from "react-translate-component";
-import LinkToAccountById from "./LinkToAccountById";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import FormattedAsset from "../Utility/FormattedAsset";
-import FormattedPrice from "../Utility/FormattedPrice";
-import AssetName from "../Utility/AssetName";
-import TimeAgo from "../Utility/TimeAgo";
-import HelpContent from "../Utility/HelpContent";
-import Icon from "../Icon/Icon";
-import assetUtils from "common/asset_utils";
-import utils from "common/utils";
-import {ChainStore} from "bitsharesjs/es";
+import React from 'react';
+import {Link} from 'react-router/es';
+import Translate from 'react-translate-component';
+import LinkToAccountById from './LinkToAccountById';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import FormattedAsset from '../Utility/FormattedAsset';
+import FormattedPrice from '../Utility/FormattedPrice';
+import AssetName from '../Utility/AssetName';
+import TimeAgo from '../Utility/TimeAgo';
+import HelpContent from '../Utility/HelpContent';
+import Icon from '../Icon/Icon';
+import assetUtils from 'common/asset_utils';
+import utils from 'common/utils';
+import {ChainStore} from 'bitsharesjs/es';
 
 class AssetFlag extends React.Component {
     render()

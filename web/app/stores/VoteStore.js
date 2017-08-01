@@ -1,10 +1,10 @@
-import BaseStore from "./BaseStore";
-import Immutable from "immutable";
-import alt from "alt-instance";
-import VoteActions from "actions/VoteActions";
-import AccountActions from "actions/AccountActions";
-import AccountStore from "stores/AccountStore";
-import {get_object_id} from "common/utils";
+import BaseStore from './BaseStore';
+import Immutable from 'immutable';
+import alt from 'alt-instance';
+import VoteActions from 'actions/VoteActions';
+import AccountActions from 'actions/AccountActions';
+import AccountStore from 'stores/AccountStore';
+import {get_object_id} from 'common/utils';
 
 const COMMITTEE_MEMBER = 0;
 const WITNESS = 1;

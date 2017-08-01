@@ -1,9 +1,9 @@
-import React from "react";
-import Translate from "react-translate-component";
-import AssetName from "../Utility/AssetName";
-import utils from "common/utils";
-import cnames from "classnames";
-import ReactTooltip from "react-tooltip";
+import React from 'react';
+import Translate from 'react-translate-component';
+import AssetName from '../Utility/AssetName';
+import utils from 'common/utils';
+import cnames from 'classnames';
+import ReactTooltip from 'react-tooltip';
 
 export default class PriceStat extends React.Component {
 

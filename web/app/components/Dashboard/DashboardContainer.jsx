@@ -1,10 +1,10 @@
-import React from "react";
-import AccountStore from "stores/AccountStore";
-import SettingsStore from "stores/SettingsStore";
-import MarketsStore from "stores/MarketsStore";
+import React from 'react';
+import AccountStore from 'stores/AccountStore';
+import SettingsStore from 'stores/SettingsStore';
+import MarketsStore from 'stores/MarketsStore';
 
-import AltContainer from "alt-container";
-import Dashboard from "./Dashboard";
+import AltContainer from 'alt-container';
+import Dashboard from './Dashboard';
 
 class DashboardContainer extends React.Component {
     render() {

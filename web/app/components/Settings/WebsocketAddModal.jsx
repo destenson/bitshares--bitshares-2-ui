@@ -1,9 +1,9 @@
-import React from "react";
-import Translate from "react-translate-component";
-import Trigger from "react-foundation-apps/src/trigger";
-import Modal from "react-foundation-apps/src/modal";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import SettingsActions from "actions/SettingsActions";
+import React from 'react';
+import Translate from 'react-translate-component';
+import Trigger from 'react-foundation-apps/src/trigger';
+import Modal from 'react-foundation-apps/src/modal';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import SettingsActions from 'actions/SettingsActions';
 
 class WebsocketAddModal extends React.Component {
 

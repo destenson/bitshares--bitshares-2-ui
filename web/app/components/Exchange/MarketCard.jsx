@@ -1,10 +1,10 @@
-import React from "react";
-import FormattedAsset from "../Utility/FormattedAsset";
-import FormattedPrice from "../Utility/FormattedPrice";
-import Translate from "react-translate-component";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import utils from "common/utils";
+import React from 'react';
+import FormattedAsset from '../Utility/FormattedAsset';
+import FormattedPrice from '../Utility/FormattedPrice';
+import Translate from 'react-translate-component';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import utils from 'common/utils';
 
 class MarketCard extends React.Component {
 

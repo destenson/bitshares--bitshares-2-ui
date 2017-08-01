@@ -1,9 +1,9 @@
-import React from "react";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import Modal from "react-foundation-apps/src/modal";
-import Trigger from "react-foundation-apps/src/trigger";
-import utils from "common/utils";
-import Translate from "react-translate-component";
+import React from 'react';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import Modal from 'react-foundation-apps/src/modal';
+import Trigger from 'react-foundation-apps/src/trigger';
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
 
 export default class ConfirmModal extends React.Component {
 

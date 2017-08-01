@@ -1,8 +1,8 @@
-import React from "react";
-import classnames from "classnames";
-import Translate from "react-translate-component";
-import cookies from "cookies-js";
-import SettingsStore from "stores/SettingsStore";
+import React from 'react';
+import classnames from 'classnames';
+import Translate from 'react-translate-component';
+import cookies from 'cookies-js';
+import SettingsStore from 'stores/SettingsStore';
 
 /**
  * @brief Allows the user to enter a referral code

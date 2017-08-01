@@ -1,7 +1,7 @@
-import Immutable from "immutable";
-import alt from "alt-instance";
-import GatewayActions from "actions/GatewayActions";
-import ls from "common/localStorage";
+import Immutable from 'immutable';
+import alt from 'alt-instance';
+import GatewayActions from 'actions/GatewayActions';
+import ls from 'common/localStorage';
 
 const STORAGE_KEY = "__graphene__";
 let ss = new ls(STORAGE_KEY);

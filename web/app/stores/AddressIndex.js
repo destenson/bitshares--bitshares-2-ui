@@ -1,9 +1,9 @@
-import alt from "alt-instance";
-import iDB from "idb-instance";
-import {key} from "bitsharesjs/es";
-import {ChainConfig} from "bitsharesjs-ws";
-import Immutable from "immutable";
-import BaseStore from "stores/BaseStore";
+import alt from 'alt-instance';
+import iDB from 'idb-instance';
+import {key} from 'bitsharesjs/es';
+import {ChainConfig} from 'bitsharesjs-ws';
+import Immutable from 'immutable';
+import BaseStore from 'stores/BaseStore';
 
 let AddressIndexWorker;
 if (__ELECTRON__) {

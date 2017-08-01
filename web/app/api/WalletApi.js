@@ -1,5 +1,5 @@
-import {SerializerValidation, TransactionBuilder, TransactionHelper} from "bitsharesjs/es";
-import ApplicationApi from "./ApplicationApi";
+import {SerializerValidation, TransactionBuilder, TransactionHelper} from 'bitsharesjs/es';
+import ApplicationApi from './ApplicationApi';
 
 class WalletApi {
 

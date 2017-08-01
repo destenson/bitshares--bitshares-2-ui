@@ -1,8 +1,8 @@
-import React from "react";
-import {Link} from "react-router/es";
-import ChainTypes from "./ChainTypes";
-import BindToChainState from "./BindToChainState";
-import AssetName from "./AssetName";
+import React from 'react';
+import {Link} from 'react-router/es';
+import ChainTypes from './ChainTypes';
+import BindToChainState from './BindToChainState';
+import AssetName from './AssetName';
 
 /**
  *  Given a base and quote asset, render a link to that market

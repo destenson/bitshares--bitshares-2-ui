@@ -1,9 +1,9 @@
-import React from "react";
-import utils from "common/utils";
-import asset_utils from "common/asset_utils";
-import ChainTypes from "./ChainTypes";
-import BindToChainState from "./BindToChainState";
-import counterpart from "counterpart";
+import React from 'react';
+import utils from 'common/utils';
+import asset_utils from 'common/asset_utils';
+import ChainTypes from './ChainTypes';
+import BindToChainState from './BindToChainState';
+import counterpart from 'counterpart';
 
 class AssetName extends React.Component {
 
@@ -30,7 +30,7 @@ class AssetName extends React.Component {
 	}
 
 
-	/*  DEE: My render() was like this: (I think it fixes the problem worked around below by avoiding some coins */
+	/*  DEE: My render() was like this: (I think it fixes the problem worked around below by avoiding some coins * /
 	render() {
 		let {name, replace, asset, withTooltip} = this.props;
 
@@ -45,7 +45,7 @@ class AssetName extends React.Component {
 			return <span>{dispName}</span>;
 		}
 	}
-	 */
+  */
 	render() {
 		let {name, replace, asset, noPrefix} = this.props;
 		let isBitAsset = asset.has("bitasset");

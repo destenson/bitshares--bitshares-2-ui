@@ -1,9 +1,9 @@
-import React, {Component} from "react";
-import {Link} from "react-router/es";
-import { connect } from "alt-react";
-import WalletManagerStore from "stores/WalletManagerStore";
-import BalanceClaimActive from "components/Wallet/BalanceClaimActive";
-import Translate from "react-translate-component";
+import React, {Component} from 'react';
+import {Link} from 'react-router/es';
+import {connect} from 'alt-react';
+import WalletManagerStore from 'stores/WalletManagerStore';
+import BalanceClaimActive from 'components/Wallet/BalanceClaimActive';
+import Translate from 'react-translate-component';
 
 const connectObject = {
     listenTo() {

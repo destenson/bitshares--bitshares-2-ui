@@ -1,14 +1,13 @@
-import React from "react";
-import {FormattedNumber} from "react-intl";
-import utils from "common/utils";
-import assetUtils from "common/asset_utils";
-import {PropTypes} from "react";
-import ChainTypes from "./ChainTypes";
-import BindToChainState from "./BindToChainState";
-import Popover from "react-popover";
-import HelpContent from "./HelpContent";
-import AssetName from "./AssetName";
-import {ChainStore} from "bitsharesjs/es";
+import React, {PropTypes} from 'react';
+import {FormattedNumber} from 'react-intl';
+import utils from 'common/utils';
+import assetUtils from 'common/asset_utils';
+import ChainTypes from './ChainTypes';
+import BindToChainState from './BindToChainState';
+import Popover from 'react-popover';
+import HelpContent from './HelpContent';
+import AssetName from './AssetName';
+import {ChainStore} from 'bitsharesjs/es';
 
 /**
  *  Given an amount and an asset, render it with proper precision

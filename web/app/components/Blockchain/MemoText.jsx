@@ -1,12 +1,12 @@
-import React from "react";
-import PrivateKeyStore from "stores/PrivateKeyStore";
-import WalletUnlockActions from "actions/WalletUnlockActions";
-import counterpart from "counterpart";
-import Icon from "../Icon/Icon";
-import { connect } from "alt-react";
-import WalletUnlockStore from "stores/WalletUnlockStore";
-import utils from "common/utils";
-import ReactTooltip from "react-tooltip";
+import React from 'react';
+import PrivateKeyStore from 'stores/PrivateKeyStore';
+import WalletUnlockActions from 'actions/WalletUnlockActions';
+import counterpart from 'counterpart';
+import Icon from '../Icon/Icon';
+import {connect} from 'alt-react';
+import WalletUnlockStore from 'stores/WalletUnlockStore';
+import utils from 'common/utils';
+import ReactTooltip from 'react-tooltip';
 
 class MemoText extends React.Component {
 

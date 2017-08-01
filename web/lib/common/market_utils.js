@@ -1,5 +1,6 @@
-import utils from "./utils";
-import {ChainStore, ChainTypes} from "bitsharesjs/es";
+import utils from './utils';
+import {ChainStore, ChainTypes} from 'bitsharesjs/es';
+
 let {object_type} = ChainTypes;
 let opTypes = Object.keys(object_type);
 

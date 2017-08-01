@@ -1,12 +1,12 @@
-import React from "react";
-import FormattedAsset from "../Utility/FormattedAsset";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import AccountName from "../Utility/AccountName";
-import utils from "common/utils";
-import Icon from "../Icon/Icon";
-import MarketsActions from "actions/MarketsActions";
-import SettingsActions from "actions/SettingsActions";
+import React from 'react';
+import FormattedAsset from '../Utility/FormattedAsset';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import AccountName from '../Utility/AccountName';
+import utils from 'common/utils';
+import Icon from '../Icon/Icon';
+import MarketsActions from 'actions/MarketsActions';
+import SettingsActions from 'actions/SettingsActions';
 
 class MarketRow extends React.Component {
 

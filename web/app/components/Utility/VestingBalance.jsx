@@ -1,7 +1,7 @@
-import React from "react";
-import FormattedAsset from "./FormattedAsset";
-import ChainTypes from "./ChainTypes";
-import BindToChainState from "./BindToChainState";
+import React from 'react';
+import FormattedAsset from './FormattedAsset';
+import ChainTypes from './ChainTypes';
+import BindToChainState from './BindToChainState';
 
 /**
  *  Given a balance_object, displays it in a pretty way

@@ -1,14 +1,15 @@
-import React from "react";
-import Immutable from "immutable";
-import counterpart from "counterpart";
-import classNames from "classnames";
-import Translate from "react-translate-component";
-import HelpContent from "../Utility/HelpContent";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import FormattedAsset from "../Utility/FormattedAsset";
-import {EquivalentValueComponent} from "../Utility/EquivalentValueComponent";
-import {ChainStore, ChainTypes as grapheneChainTypes} from "bitsharesjs/es";
+import React from 'react';
+import Immutable from 'immutable';
+import counterpart from 'counterpart';
+import classNames from 'classnames';
+import Translate from 'react-translate-component';
+import HelpContent from '../Utility/HelpContent';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import FormattedAsset from '../Utility/FormattedAsset';
+import {EquivalentValueComponent} from '../Utility/EquivalentValueComponent';
+import {ChainStore, ChainTypes as grapheneChainTypes} from 'bitsharesjs/es';
+
 const {operations} = grapheneChainTypes;
 let ops = Object.keys(operations);
 

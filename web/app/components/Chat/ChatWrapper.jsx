@@ -1,7 +1,7 @@
-import React from "react";
-import Chat from "./Chat";
-import Translate from "react-translate-component";
-import SettingsActions from "actions/SettingsActions";
+import React from 'react';
+import Chat from './Chat';
+import Translate from 'react-translate-component';
+import SettingsActions from 'actions/SettingsActions';
 
 export default class ChatWrapper extends React.Component {
 

@@ -1,13 +1,12 @@
-import React from "react";
-import {Link} from "react-router/es";
-import Icon from "../Icon/Icon";
-import AssetName from "../Utility/AssetName";
-import MarketsActions from "actions/MarketsActions";
-import SettingsActions from "actions/SettingsActions";
-import PriceStat from "./PriceStat";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
-import cnames from "classnames";
+import React from 'react';
+import {Link} from 'react-router/es';
+import Icon from '../Icon/Icon';
+import AssetName from '../Utility/AssetName';
+import MarketsActions from 'actions/MarketsActions';
+import SettingsActions from 'actions/SettingsActions';
+import PriceStat from './PriceStat';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
 
 export default class ExchangeHeader extends React.Component {
 	shouldComponentUpdate(nextProps) {

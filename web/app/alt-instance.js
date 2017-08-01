@@ -1,4 +1,5 @@
-import Alt from "alt";
+import Alt from 'alt';
+
 var alt = new Alt();
 
 // DEBUG log all action events

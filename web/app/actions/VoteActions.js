@@ -1,7 +1,7 @@
-import alt from "alt-instance";
-import WalletApi from "api/WalletApi";
-import {cloneDeep} from "lodash";
-import WalletDb from "stores/WalletDb";
+import alt from 'alt-instance';
+import WalletApi from 'api/WalletApi';
+import {cloneDeep} from 'lodash';
+import WalletDb from 'stores/WalletDb';
 
 let wallet_api = new WalletApi();
 

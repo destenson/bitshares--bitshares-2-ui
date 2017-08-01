@@ -1,14 +1,14 @@
-import Immutable from "immutable";
-import alt from "alt-instance";
-import BaseStore from "./BaseStore";
-import idb_helper from "idb-helper";
-import WalletDb from "./WalletDb";
+import Immutable from 'immutable';
+import alt from 'alt-instance';
+import BaseStore from './BaseStore';
+import idb_helper from 'idb-helper';
+import WalletDb from './WalletDb';
 
-import {PrivateKeyTcomb} from "./tcomb_structs";
-import PrivateKeyActions from "actions/PrivateKeyActions";
-import CachedPropertyActions from "actions/CachedPropertyActions";
-import AddressIndex from "stores/AddressIndex";
-import {PublicKey, ChainStore, Aes} from "bitsharesjs/es";
+import {PrivateKeyTcomb} from './tcomb_structs';
+import PrivateKeyActions from 'actions/PrivateKeyActions';
+import CachedPropertyActions from 'actions/CachedPropertyActions';
+import AddressIndex from 'stores/AddressIndex';
+import {Aes, ChainStore, PublicKey} from 'bitsharesjs/es';
 
 /** No need to wait on the promises returned by this store as long as
     this.state.privateKeyStorage_error == false and

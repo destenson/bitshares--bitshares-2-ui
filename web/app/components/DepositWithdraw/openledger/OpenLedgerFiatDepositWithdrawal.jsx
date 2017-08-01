@@ -1,15 +1,15 @@
-import React from "react";
-import Translate from "react-translate-component";
-import ChainTypes from "components/Utility/ChainTypes";
-import BindToChainState from "components/Utility/BindToChainState";
-import WalletDb from "stores/WalletDb";
-import Modal from "react-foundation-apps/src/modal";
-import Trigger from "react-foundation-apps/src/trigger";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import AccountBalance from "../../Account/AccountBalance";
-import BalanceComponent from "components/Utility/BalanceComponent";
-import DepositFiatOpenLedger from "./DepositFiatOpenLedger";
-import WithdrawFiatOpenLedger from "./WithdrawFiatOpenLedger";
+import React from 'react';
+import Translate from 'react-translate-component';
+import ChainTypes from 'components/Utility/ChainTypes';
+import BindToChainState from 'components/Utility/BindToChainState';
+import WalletDb from 'stores/WalletDb';
+import Modal from 'react-foundation-apps/src/modal';
+import Trigger from 'react-foundation-apps/src/trigger';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import AccountBalance from '../../Account/AccountBalance';
+import BalanceComponent from 'components/Utility/BalanceComponent';
+import DepositFiatOpenLedger from './DepositFiatOpenLedger';
+import WithdrawFiatOpenLedger from './WithdrawFiatOpenLedger';
 
 class OpenLedgerFiatDepositWithdrawCurrency extends React.Component {
     static propTypes = {

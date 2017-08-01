@@ -1,10 +1,10 @@
-import React from "react";
-import Translate from "react-translate-component";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import FormattedAsset from "./FormattedAsset";
-import FloatingDropdown from "./FloatingDropdown";
-import Immutable from "immutable";
+import React from 'react';
+import Translate from 'react-translate-component';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import FormattedAsset from './FormattedAsset';
+import FloatingDropdown from './FloatingDropdown';
+import Immutable from 'immutable';
 
 class AssetSelector extends React.Component {
 

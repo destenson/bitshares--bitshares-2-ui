@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { Route, IndexRoute } from "react-router/es";
-import willTransitionTo from "./routerTransition";
-import App from "./App";
+import {IndexRoute, Route} from 'react-router/es';
+import willTransitionTo from './routerTransition';
+import App from './App';
 
 /*
 * Electron does not support async loading of components via System.import,

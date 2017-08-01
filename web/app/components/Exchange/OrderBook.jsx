@@ -1,13 +1,12 @@
-import React from "react";
-import {PropTypes} from "react";
-import Ps from "perfect-scrollbar";
-import utils from "common/utils";
-import Translate from "react-translate-component";
-import SettingsActions from "actions/SettingsActions";
-import classnames from "classnames";
-import PriceText from "../Utility/PriceText";
-import TransitionWrapper from "../Utility/TransitionWrapper";
-import AssetName from "../Utility/AssetName";
+import React, {PropTypes} from 'react';
+import Ps from 'perfect-scrollbar';
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
+import SettingsActions from 'actions/SettingsActions';
+import classnames from 'classnames';
+import PriceText from '../Utility/PriceText';
+import TransitionWrapper from '../Utility/TransitionWrapper';
+import AssetName from '../Utility/AssetName';
 
 class OrderBookRowVertical extends React.Component {
 

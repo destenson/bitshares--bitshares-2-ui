@@ -1,6 +1,6 @@
-import React from "react";
-import {Link} from "react-router";
-import Translate from "react-translate-component";
+import React from 'react';
+import {Link} from 'react-router';
+import Translate from 'react-translate-component';
 
 export default class LoginSelector extends React.Component {
 

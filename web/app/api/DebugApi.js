@@ -1,4 +1,5 @@
-import { SerializerValidation, types} from "bitsharesjs/es";
+import {SerializerValidation, types} from 'bitsharesjs/es';
+
 var config = require("chain/serializer_config");
 
 class DebugApi {

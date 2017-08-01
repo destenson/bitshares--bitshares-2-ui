@@ -1,7 +1,7 @@
-import React from "react";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import LinkToAccountById from "./LinkToAccountById";
+import React from 'react';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import LinkToAccountById from './LinkToAccountById';
 
 class LinkToWitnessById extends React.Component {
     static propTypes = {

@@ -1,12 +1,9 @@
-import Immutable from "immutable";
-import alt from "alt-instance";
-import BlockchainActions from "actions/BlockchainActions";
-import {ChainStore} from "bitsharesjs/es";
+import Immutable from 'immutable';
+import alt from 'alt-instance';
+import BlockchainActions from 'actions/BlockchainActions';
+import {ChainStore} from 'bitsharesjs/es';
 
-import {
-    Block
-}
-from "./tcomb_structs";
+import {Block} from './tcomb_structs';
 
 class BlockchainStore {
     constructor() {

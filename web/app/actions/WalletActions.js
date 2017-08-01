@@ -1,11 +1,11 @@
-import WalletDb from "stores/WalletDb";
-import WalletUnlockActions from "actions/WalletUnlockActions";
-import CachedPropertyActions from "actions/CachedPropertyActions";
-import ApplicationApi from "api/ApplicationApi";
-import {TransactionBuilder, FetchChain} from "bitsharesjs/es";
-import {Apis} from "bitsharesjs-ws";
-import alt from "alt-instance";
-import SettingsStore from "stores/SettingsStore";
+import WalletDb from 'stores/WalletDb';
+import WalletUnlockActions from 'actions/WalletUnlockActions';
+import CachedPropertyActions from 'actions/CachedPropertyActions';
+import ApplicationApi from 'api/ApplicationApi';
+import {FetchChain, TransactionBuilder} from 'bitsharesjs/es';
+import {Apis} from 'bitsharesjs-ws';
+import alt from 'alt-instance';
+import SettingsStore from 'stores/SettingsStore';
 
 let application_api = new ApplicationApi();
 

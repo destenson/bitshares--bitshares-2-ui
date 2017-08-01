@@ -1,16 +1,16 @@
-import React from "react";
-import classNames from "classnames";
-import FormattedAsset from "../Utility/FormattedAsset";
-import AccountActions from "actions/AccountActions";
-import AccountSelector from "../Account/AccountSelector";
-import AccountInfo from "../Account/AccountInfo";
-import BalanceComponent from "../Utility/BalanceComponent";
-import {ChainStore, FetchChainObjects} from "bitsharesjs/es";
-import NotificationActions from "actions/NotificationActions";
-import TransactionConfirmStore from "stores/TransactionConfirmStore";
-import {decompress} from "lzma";
-import bs58 from "common/base58";
-import utils from "common/utils";
+import React from 'react';
+import classNames from 'classnames';
+import FormattedAsset from '../Utility/FormattedAsset';
+import AccountActions from 'actions/AccountActions';
+import AccountSelector from '../Account/AccountSelector';
+import AccountInfo from '../Account/AccountInfo';
+import BalanceComponent from '../Utility/BalanceComponent';
+import {ChainStore, FetchChainObjects} from 'bitsharesjs/es';
+import NotificationActions from 'actions/NotificationActions';
+import TransactionConfirmStore from 'stores/TransactionConfirmStore';
+import {decompress} from 'lzma';
+import bs58 from 'common/base58';
+import utils from 'common/utils';
 
 // invoice example:
 //{

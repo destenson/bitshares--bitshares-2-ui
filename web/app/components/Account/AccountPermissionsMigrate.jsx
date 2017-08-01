@@ -1,8 +1,8 @@
-import React from "react";
-import PasswordInput from "./../Forms/PasswordInput";
-import WalletDb from "stores/WalletDb";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
+import React from 'react';
+import PasswordInput from './../Forms/PasswordInput';
+import WalletDb from 'stores/WalletDb';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
 
 export default class AccountPermissionsMigrate extends React.Component {
 

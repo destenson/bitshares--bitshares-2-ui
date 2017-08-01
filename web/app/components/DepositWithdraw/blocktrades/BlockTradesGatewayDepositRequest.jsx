@@ -1,18 +1,18 @@
-import React from "react";
-import Translate from "react-translate-component";
-import {ChainStore} from "bitsharesjs/es";
-import ChainTypes from "components/Utility/ChainTypes";
-import BindToChainState from "components/Utility/BindToChainState";
-import WithdrawModalBlocktrades from "./WithdrawModalBlocktrades";
-import Modal from "react-foundation-apps/src/modal";
-import Trigger from "react-foundation-apps/src/trigger";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import AccountBalance from "../../Account/AccountBalance";
-import BlockTradesDepositAddressCache from "common/BlockTradesDepositAddressCache";
-import AssetName from "components/Utility/AssetName";
-import LinkToAccountById from "components/Blockchain/LinkToAccountById";
-import {requestDepositAddress} from "common/blockTradesMethods";
-import { blockTradesAPIs } from "api/apiConfig";
+import React from 'react';
+import Translate from 'react-translate-component';
+import {ChainStore} from 'bitsharesjs/es';
+import ChainTypes from 'components/Utility/ChainTypes';
+import BindToChainState from 'components/Utility/BindToChainState';
+import WithdrawModalBlocktrades from './WithdrawModalBlocktrades';
+import Modal from 'react-foundation-apps/src/modal';
+import Trigger from 'react-foundation-apps/src/trigger';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import AccountBalance from '../../Account/AccountBalance';
+import BlockTradesDepositAddressCache from 'common/BlockTradesDepositAddressCache';
+import AssetName from 'components/Utility/AssetName';
+import LinkToAccountById from 'components/Blockchain/LinkToAccountById';
+import {requestDepositAddress} from 'common/blockTradesMethods';
+import {blockTradesAPIs} from 'api/apiConfig';
 
 class BlockTradesGatewayDepositRequest extends React.Component {
     static propTypes = {

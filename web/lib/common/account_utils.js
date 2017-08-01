@@ -1,6 +1,6 @@
-import {ChainStore} from "bitsharesjs/es";
-import utils from "./utils";
-import counterpart from "counterpart";
+import {ChainStore} from 'bitsharesjs/es';
+import utils from './utils';
+import counterpart from 'counterpart';
 
 export default class AccountUtils {
 

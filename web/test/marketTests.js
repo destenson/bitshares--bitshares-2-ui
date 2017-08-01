@@ -1,6 +1,5 @@
-import {LimitOrderCreate, Price, FeedPrice, Asset, limitByPrecision,
-    precisionToRatio, LimitOrder, SettleOrder, CallOrder} from "../lib/common/MarketClasses";
-import assert from "assert";
+import {Asset, CallOrder, FeedPrice, limitByPrecision, LimitOrder, LimitOrderCreate, precisionToRatio, Price, SettleOrder} from '../lib/common/MarketClasses';
+import assert from 'assert';
 
 console.log("**** Starting market tests here ****");
 const asset1 = {asset_id: "1.3.0", precision: 5};

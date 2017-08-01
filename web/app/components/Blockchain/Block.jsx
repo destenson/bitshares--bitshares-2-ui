@@ -1,14 +1,13 @@
-import React from "react";
-import {PropTypes} from "react";
-import BaseComponent from "../BaseComponent";
-import {FormattedDate} from "react-intl";
-import Immutable from "immutable";
-import BlockchainActions from "actions/BlockchainActions";
-import Transaction from "./Transaction";
-import Translate from "react-translate-component";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import LinkToWitnessById from "./LinkToWitnessById";
+import React, {PropTypes} from 'react';
+import BaseComponent from '../BaseComponent';
+import {FormattedDate} from 'react-intl';
+import Immutable from 'immutable';
+import BlockchainActions from 'actions/BlockchainActions';
+import Transaction from './Transaction';
+import Translate from 'react-translate-component';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import LinkToWitnessById from './LinkToWitnessById';
 
 class TransactionList extends React.Component {
 

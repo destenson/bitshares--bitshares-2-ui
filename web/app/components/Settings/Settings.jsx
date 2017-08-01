@@ -1,15 +1,15 @@
-import React from "react";
-import counterpart from "counterpart";
-import IntlActions from "actions/IntlActions";
-import Translate from "react-translate-component";
-import SettingsActions from "actions/SettingsActions";
-import WebsocketAddModal from "./WebsocketAddModal";
-import SettingsEntry from "./SettingsEntry";
-import AccountsSettings from "./AccountsSettings";
-import WalletSettings from "./WalletSettings";
-import PasswordSettings from "./PasswordSettings";
-import RestoreSettings from "./RestoreSettings";
-import BackupSettings from "./BackupSettings";
+import React from 'react';
+import counterpart from 'counterpart';
+import IntlActions from 'actions/IntlActions';
+import Translate from 'react-translate-component';
+import SettingsActions from 'actions/SettingsActions';
+import WebsocketAddModal from './WebsocketAddModal';
+import SettingsEntry from './SettingsEntry';
+import AccountsSettings from './AccountsSettings';
+import WalletSettings from './WalletSettings';
+import PasswordSettings from './PasswordSettings';
+import RestoreSettings from './RestoreSettings';
+import BackupSettings from './BackupSettings';
 
 
 class Settings extends React.Component {

@@ -1,7 +1,7 @@
-import React from "react";
-import {Link} from "react-router/es";
-import Translate from "react-translate-component";
-import Icon from "../Icon/Icon";
+import React from 'react';
+import {Link} from 'react-router/es';
+import Translate from 'react-translate-component';
+import Icon from '../Icon/Icon';
 
 class ExplorerCard extends React.Component {
 

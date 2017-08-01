@@ -1,11 +1,10 @@
-import React from "react";
-import {PropTypes} from "react";
-import Highcharts from "highcharts/highstock";
-import ReactHighstock from "react-highcharts/dist/ReactHighstock";
-import utils from "common/utils";
-import {cloneDeep, reduce} from "lodash";
-import Translate from "react-translate-component";
-import colors from "assets/colors";
+import React, {PropTypes} from 'react';
+import Highcharts from 'highcharts/highstock';
+import ReactHighstock from 'react-highcharts/dist/ReactHighstock';
+import utils from 'common/utils';
+import {cloneDeep, reduce} from 'lodash';
+import Translate from 'react-translate-component';
+import colors from 'assets/colors';
 
 require("./highcharts-plugins/technical-indicators.src.js");
 require("./highcharts-plugins/rsi.js");

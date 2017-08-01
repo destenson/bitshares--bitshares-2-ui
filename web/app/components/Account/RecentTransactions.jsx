@@ -1,14 +1,14 @@
-import React from "react";
-import Translate from "react-translate-component";
-import {saveAs} from "file-saver";
-import Operation from "../Blockchain/Operation";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import utils from "common/utils";
-import {ChainTypes as grapheneChainTypes} from "bitsharesjs/es";
-import TransitionWrapper from "../Utility/TransitionWrapper";
-import ps from "perfect-scrollbar";
-import counterpart from "counterpart";
+import React from 'react';
+import Translate from 'react-translate-component';
+import {saveAs} from 'file-saver';
+import Operation from '../Blockchain/Operation';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import utils from 'common/utils';
+import {ChainTypes as grapheneChainTypes} from 'bitsharesjs/es';
+import TransitionWrapper from '../Utility/TransitionWrapper';
+import ps from 'perfect-scrollbar';
+import counterpart from 'counterpart';
 
 const {operations} = grapheneChainTypes;
 

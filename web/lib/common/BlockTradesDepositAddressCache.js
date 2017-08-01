@@ -1,4 +1,4 @@
-import WalletDb from "stores/WalletDb";
+import WalletDb from 'stores/WalletDb';
 
 class BlockTradesDepositAddressCache {
     constructor()

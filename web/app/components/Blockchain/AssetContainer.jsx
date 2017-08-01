@@ -1,8 +1,8 @@
-import React from "react";
-import AccountStore from "stores/AccountStore";
-import AssetStore from "stores/AssetStore";
-import AltContainer from "alt-container";
-import Asset from "./Asset";
+import React from 'react';
+import AccountStore from 'stores/AccountStore';
+import AssetStore from 'stores/AssetStore';
+import AltContainer from 'alt-container';
+import Asset from './Asset';
 
 class AssetContainer extends React.Component {
 

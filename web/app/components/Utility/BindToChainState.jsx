@@ -1,9 +1,9 @@
-import React from "react";
-import {curry, flow, reject, clone, pairs, omit, get, pick} from "lodash";
-import {ChainStore} from "bitsharesjs/es";
-import ChainTypes from "./ChainTypes";
-import utils from "common/utils";
-import LoadingIndicator from "../LoadingIndicator";
+import React from 'react';
+import {clone, curry, flow, get, omit, pairs, pick, reject} from 'lodash';
+import {ChainStore} from 'bitsharesjs/es';
+import ChainTypes from './ChainTypes';
+import utils from 'common/utils';
+import LoadingIndicator from '../LoadingIndicator';
 
 /**
  * @brief provides automatic fetching and updating of chain data

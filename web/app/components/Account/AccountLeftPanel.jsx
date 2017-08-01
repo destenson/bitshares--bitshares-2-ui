@@ -1,13 +1,11 @@
-import React from "react";
-import {PropTypes} from "react";
-import {Link} from "react-router/es";
-import counterpart from "counterpart";
-import ReactTooltip from "react-tooltip";
-import Icon from "../Icon/Icon";
-import AccountInfo from "./AccountInfo";
-import Translate from "react-translate-component";
-import AccountActions from "actions/AccountActions";
-import SettingsActions from "actions/SettingsActions";
+import React, {PropTypes} from 'react';
+import {Link} from 'react-router/es';
+import counterpart from 'counterpart';
+import ReactTooltip from 'react-tooltip';
+import AccountInfo from './AccountInfo';
+import Translate from 'react-translate-component';
+import AccountActions from 'actions/AccountActions';
+import SettingsActions from 'actions/SettingsActions';
 
 class AccountLeftPanel extends React.Component {
 

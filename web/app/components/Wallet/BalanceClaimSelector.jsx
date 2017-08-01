@@ -1,12 +1,12 @@
-import React, {Component} from "react";
-import { connect } from "alt-react";
-import Immutable from "immutable";
+import React, {Component} from 'react';
+import {connect} from 'alt-react';
+import Immutable from 'immutable';
 
-import PrivateKeyStore from "stores/PrivateKeyStore";
-import BalanceClaimActiveStore from "stores/BalanceClaimActiveStore";
-import BalanceClaimActiveActions from "actions/BalanceClaimActiveActions";
-import FormattedAsset from "components/Utility/FormattedAsset";
-import Translate from "react-translate-component";
+import PrivateKeyStore from 'stores/PrivateKeyStore';
+import BalanceClaimActiveStore from 'stores/BalanceClaimActiveStore';
+import BalanceClaimActiveActions from 'actions/BalanceClaimActiveActions';
+import FormattedAsset from 'components/Utility/FormattedAsset';
+import Translate from 'react-translate-component';
 
 class BalanceClaimSelector extends Component {
     componentWillReceiveProps(nextProps) {

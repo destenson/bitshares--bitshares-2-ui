@@ -1,17 +1,16 @@
-import React from "react";
-import {PropTypes} from "react";
-import AssetActions from "actions/AssetActions";
-import SettingsActions from "actions/SettingsActions";
-import {Link} from "react-router/es";
-import Immutable from "immutable";
-import Translate from "react-translate-component";
-import LinkToAccountById from "../Blockchain/LinkToAccountById";
-import assetUtils from "common/asset_utils";
-import counterpart from "counterpart";
-import FormattedAsset from "../Utility/FormattedAsset";
-import AssetName from "../Utility/AssetName";
-import {Tabs, Tab} from "../Utility/Tabs";
-import {ChainStore} from "bitsharesjs/es";
+import React, {PropTypes} from 'react';
+import AssetActions from 'actions/AssetActions';
+import SettingsActions from 'actions/SettingsActions';
+import {Link} from 'react-router/es';
+import Immutable from 'immutable';
+import Translate from 'react-translate-component';
+import LinkToAccountById from '../Blockchain/LinkToAccountById';
+import assetUtils from 'common/asset_utils';
+import counterpart from 'counterpart';
+import FormattedAsset from '../Utility/FormattedAsset';
+import AssetName from '../Utility/AssetName';
+import {Tab, Tabs} from '../Utility/Tabs';
+import {ChainStore} from 'bitsharesjs/es';
 
 class Assets extends React.Component {
 

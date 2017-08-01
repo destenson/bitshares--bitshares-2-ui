@@ -1,9 +1,9 @@
-import React from "react";
-import Trigger from "react-foundation-apps/src/trigger";
-import Translate from "react-translate-component";
-import ChainTypes from "components/Utility/ChainTypes";
-import BindToChainState from "components/Utility/BindToChainState";
-import AccountBalance from "../../Account/AccountBalance";
+import React from 'react';
+import Trigger from 'react-foundation-apps/src/trigger';
+import Translate from 'react-translate-component';
+import ChainTypes from 'components/Utility/ChainTypes';
+import BindToChainState from 'components/Utility/BindToChainState';
+import AccountBalance from '../../Account/AccountBalance';
 
 class TranswiserDepositModal extends React.Component {
 

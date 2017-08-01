@@ -1,15 +1,15 @@
-import React from "react";
-import Panel from "react-foundation-apps/src/panel";
-import Trigger from "react-foundation-apps/src/trigger";
-import {Link} from "react-router/es";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import Translate from "react-translate-component";
-import AccountStore from "stores/AccountStore";
-import { connect } from "alt-react";
-import WalletUnlockStore from "stores/WalletUnlockStore";
-import WalletManagerStore from "stores/WalletManagerStore";
-import SettingsStore from "stores/SettingsStore";
-import { Apis } from "bitsharesjs-ws";
+import React from 'react';
+import Panel from 'react-foundation-apps/src/panel';
+import Trigger from 'react-foundation-apps/src/trigger';
+import {Link} from 'react-router/es';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import Translate from 'react-translate-component';
+import AccountStore from 'stores/AccountStore';
+import {connect} from 'alt-react';
+import WalletUnlockStore from 'stores/WalletUnlockStore';
+import WalletManagerStore from 'stores/WalletManagerStore';
+import SettingsStore from 'stores/SettingsStore';
+import {Apis} from 'bitsharesjs-ws';
 
 class MobileMenu extends React.Component {
     constructor() {

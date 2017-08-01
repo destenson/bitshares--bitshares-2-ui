@@ -1,9 +1,14 @@
-import React from "react";
-import { format } from "d3-format";
-import { timeFormat } from "d3-time-format";
-import Translate from "react-translate-component";
-import { ChartCanvas, Chart, series, scale, coordinates, tooltip, axes,
-    indicator, helper, interactive } from "react-stockcharts/es";
+import React from 'react';
+import {format} from 'd3-format';
+import {timeFormat} from 'd3-time-format';
+import Translate from 'react-translate-component';
+import {axes, Chart, ChartCanvas, coordinates, helper, indicator, interactive, scale, series, tooltip} from 'react-stockcharts/es';
+import colors from 'assets/colors';
+import {cloneDeep} from 'lodash';
+import utils from 'common/utils';
+import cnames from 'classnames';
+import counterpart from 'counterpart';
+import Icon from '../Icon/Icon';
 
 const { CandlestickSeries, BarSeries, LineSeries, AreaSeries, BollingerSeries,
      MACDSeries } = series;
@@ -15,12 +20,6 @@ const { ema, sma, macd, bollingerBand } = indicator;
 const { CrossHairCursor, MouseCoordinateX, MouseCoordinateY, CurrentCoordinate } = coordinates;
 const { FibonacciRetracement, TrendLine } = interactive;
 const { OHLCTooltip, MovingAverageTooltip, BollingerBandTooltip, MACDTooltip } = tooltip;
-import colors from "assets/colors";
-import { cloneDeep } from "lodash";
-import utils from "common/utils";
-import cnames from "classnames";
-import counterpart from "counterpart";
-import Icon from "../Icon/Icon";
 
 class CandleStickChartWithZoomPan extends React.Component {
     constructor(props) {

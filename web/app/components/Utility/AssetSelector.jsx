@@ -1,13 +1,12 @@
-import React from "react";
-import Translate from "react-translate-component";
-import {ChainValidation} from "bitsharesjs/es";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import counterpart from "counterpart";
-import FloatingDropdown from "./FloatingDropdown";
-import FormattedAsset from "./FormattedAsset";
-import Immutable from "immutable";
-import utils from "common/utils";
+import React from 'react';
+import Translate from 'react-translate-component';
+import {ChainValidation} from 'bitsharesjs/es';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import counterpart from 'counterpart';
+import FloatingDropdown from './FloatingDropdown';
+import FormattedAsset from './FormattedAsset';
+import Immutable from 'immutable';
 
 class AssetDropdown extends React.Component {
 

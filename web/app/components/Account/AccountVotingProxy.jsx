@@ -1,12 +1,11 @@
-import React from "react";
-import {Link} from "react-router";
-import AccountSelector from "./AccountSelector";
-import BindToChainState from "../Utility/BindToChainState";
-import ChainTypes from "../Utility/ChainTypes";
-import Translate from "react-translate-component";
-import AccountImage from "../Account/AccountImage";
-import LinkToAccountById from "../Blockchain/LinkToAccountById";
-import {List} from "immutable";
+import React from 'react';
+import {Link} from 'react-router';
+import AccountSelector from './AccountSelector';
+import BindToChainState from '../Utility/BindToChainState';
+import ChainTypes from '../Utility/ChainTypes';
+import Translate from 'react-translate-component';
+import AccountImage from '../Account/AccountImage';
+import {List} from 'immutable';
 
 class AccountVotingProxy extends React.Component {
 

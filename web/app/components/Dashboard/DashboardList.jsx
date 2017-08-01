@@ -1,18 +1,18 @@
-import React from "react";
-import Immutable from "immutable";
-import utils from "common/utils";
-import Translate from "react-translate-component";
-import { connect } from "alt-react";
-import SettingsStore from "stores/SettingsStore";
-import WalletUnlockStore from "stores/WalletUnlockStore";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import SettingsActions from "actions/SettingsActions";
-import Icon from "../Icon/Icon";
-import {ChainStore} from "bitsharesjs/es";
-import TotalBalanceValue from "../Utility/TotalBalanceValue";
-import AccountStore from "stores/AccountStore";
-import counterpart from "counterpart";
+import React from 'react';
+import Immutable from 'immutable';
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
+import {connect} from 'alt-react';
+import SettingsStore from 'stores/SettingsStore';
+import WalletUnlockStore from 'stores/WalletUnlockStore';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import SettingsActions from 'actions/SettingsActions';
+import Icon from '../Icon/Icon';
+import {ChainStore} from 'bitsharesjs/es';
+import TotalBalanceValue from '../Utility/TotalBalanceValue';
+import AccountStore from 'stores/AccountStore';
+import counterpart from 'counterpart';
 
 const starSort = function(a, b, inverse, starredAccounts) {
 	let aName = a.get("name");

@@ -1,21 +1,22 @@
-import {Apis, Manager} from "bitsharesjs-ws";
-import {ChainStore} from "bitsharesjs/es";
-
+import {Apis, Manager} from 'bitsharesjs-ws';
+import {ChainStore} from 'bitsharesjs/es';
 // Stores
-import iDB from "idb-instance";
-import AccountRefsStore from "stores/AccountRefsStore";
-import WalletManagerStore from "stores/WalletManagerStore";
-import WalletDb from "stores/WalletDb";
-import SettingsStore from "stores/SettingsStore";
+import iDB from 'idb-instance';
+import AccountRefsStore from 'stores/AccountRefsStore';
+import WalletManagerStore from 'stores/WalletManagerStore';
+import WalletDb from 'stores/WalletDb';
+import SettingsStore from 'stores/SettingsStore';
 
-import ls from "common/localStorage";
+import ls from 'common/localStorage';
+// Actions
+import PrivateKeyActions from 'actions/PrivateKeyActions';
+
 const STORAGE_KEY = "__graphene__";
 const ss = new ls(STORAGE_KEY);
 const apiLatencies = ss.get("apiLatencies", {});
 const latencyChecks = ss.get("latencyChecks", 1);
 let apiLatenciesCount = Object.keys(apiLatencies).length;
-// Actions
-import PrivateKeyActions from "actions/PrivateKeyActions";
+
 
 ChainStore.setDispatchFrequency(20);
 

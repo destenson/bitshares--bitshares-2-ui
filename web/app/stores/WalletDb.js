@@ -1,20 +1,20 @@
-import alt from "alt-instance";
-import BaseStore from "stores/BaseStore";
+import alt from 'alt-instance';
+import BaseStore from 'stores/BaseStore';
 
-import iDB from "idb-instance";
-import idb_helper from "idb-helper";
-import {cloneDeep} from "lodash";
+import iDB from 'idb-instance';
+import idb_helper from 'idb-helper';
+import {cloneDeep} from 'lodash';
 
-import PrivateKeyStore from "stores/PrivateKeyStore";
-import SettingsStore from "stores/SettingsStore";
-import {WalletTcomb} from "./tcomb_structs";
-import TransactionConfirmActions from "actions/TransactionConfirmActions";
-import WalletUnlockActions from "actions/WalletUnlockActions";
-import PrivateKeyActions from "actions/PrivateKeyActions";
-import AccountActions from "actions/AccountActions";
-import {ChainStore, PrivateKey, key, Aes} from "bitsharesjs/es";
-import {Apis, ChainConfig} from "bitsharesjs-ws";
-import AddressIndex from "stores/AddressIndex";
+import PrivateKeyStore from 'stores/PrivateKeyStore';
+import SettingsStore from 'stores/SettingsStore';
+import {WalletTcomb} from './tcomb_structs';
+import TransactionConfirmActions from 'actions/TransactionConfirmActions';
+import WalletUnlockActions from 'actions/WalletUnlockActions';
+import PrivateKeyActions from 'actions/PrivateKeyActions';
+import AccountActions from 'actions/AccountActions';
+import {Aes, ChainStore, key, PrivateKey} from 'bitsharesjs/es';
+import {Apis, ChainConfig} from 'bitsharesjs-ws';
+import AddressIndex from 'stores/AddressIndex';
 
 let aes_private = null;
 let _passwordKey = null;

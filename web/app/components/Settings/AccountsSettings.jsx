@@ -1,10 +1,10 @@
-import React from "react";
-import {Link} from "react-router/es";
-import AccountStore from "stores/AccountStore";
-import AccountActions from "actions/AccountActions";
-import { connect } from "alt-react";
-import utils from "common/utils";
-import Translate from "react-translate-component";
+import React from 'react';
+import {Link} from 'react-router/es';
+import AccountStore from 'stores/AccountStore';
+import AccountActions from 'actions/AccountActions';
+import {connect} from 'alt-react';
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
 
 class AccountsSettings extends React.Component {
     shouldComponentUpdate(nextProps) {

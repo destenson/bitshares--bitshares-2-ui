@@ -1,14 +1,13 @@
-import React from "react";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
-import utils from "common/utils";
-import ChainTypes from "../Utility/ChainTypes";
-import FormattedAsset from "../Utility/FormattedAsset";
-import VestingBalance from "../Utility/VestingBalance";
-import LinkToAccountById from "../Blockchain/LinkToAccountById";
-import BindToChainState from "../Utility/BindToChainState";
-import {EquivalentValueComponent} from "../Utility/EquivalentValueComponent";
-import Icon from "components/Icon/Icon";
+import React from 'react';
+import counterpart from 'counterpart';
+import utils from 'common/utils';
+import ChainTypes from '../Utility/ChainTypes';
+import FormattedAsset from '../Utility/FormattedAsset';
+import VestingBalance from '../Utility/VestingBalance';
+import LinkToAccountById from '../Blockchain/LinkToAccountById';
+import BindToChainState from '../Utility/BindToChainState';
+import {EquivalentValueComponent} from '../Utility/EquivalentValueComponent';
+import Icon from 'components/Icon/Icon';
 
 class WorkerApproval extends React.Component{
 

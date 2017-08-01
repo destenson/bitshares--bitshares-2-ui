@@ -1,12 +1,12 @@
-import React from "react";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import utils from "common/utils";
-import Icon from "../Icon/Icon";
-import LinkToAccountById from "../Blockchain/LinkToAccountById";
-import pu from "common/permission_utils";
-import {cloneDeep} from "lodash";
-import {ChainStore} from "bitsharesjs/es";
+import React from 'react';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import utils from 'common/utils';
+import Icon from '../Icon/Icon';
+import LinkToAccountById from '../Blockchain/LinkToAccountById';
+import pu from 'common/permission_utils';
+import {cloneDeep} from 'lodash';
+import {ChainStore} from 'bitsharesjs/es';
 
 class AccountPermissionTree extends React.Component {
 

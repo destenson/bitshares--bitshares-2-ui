@@ -1,14 +1,14 @@
-import React from "react";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import Translate from "react-translate-component";
-import cnames from "classnames";
-import TransactionConfirmStore from "stores/TransactionConfirmStore";
-import AccountActions from "actions/AccountActions";
-import SettingsActions from "actions/SettingsActions";
-import AccountBalance from "../Account/AccountBalance";
-import utils from "common/utils";
-import SettingsStore from "stores/SettingsStore";
+import React from 'react';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import Translate from 'react-translate-component';
+import cnames from 'classnames';
+import TransactionConfirmStore from 'stores/TransactionConfirmStore';
+import AccountActions from 'actions/AccountActions';
+import SettingsActions from 'actions/SettingsActions';
+import AccountBalance from '../Account/AccountBalance';
+import utils from 'common/utils';
+import SettingsStore from 'stores/SettingsStore';
 
 class BitKapital extends React.Component {
 

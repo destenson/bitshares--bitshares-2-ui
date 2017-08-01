@@ -1,11 +1,11 @@
-import React from "react";
-import Translate from "react-translate-component";
-import {OrderRow, TableHeader} from "../Exchange/MyOpenOrders";
-import market_utils from "common/market_utils";
-import counterpart from "counterpart";
-import MarketsActions from "actions/MarketsActions";
-import {ChainStore} from "bitsharesjs/es";
-import MarketLink from "../Utility/MarketLink";
+import React from 'react';
+import Translate from 'react-translate-component';
+import {OrderRow, TableHeader} from '../Exchange/MyOpenOrders';
+import market_utils from 'common/market_utils';
+import counterpart from 'counterpart';
+import MarketsActions from 'actions/MarketsActions';
+import {ChainStore} from 'bitsharesjs/es';
+import MarketLink from '../Utility/MarketLink';
 
 class AccountOrders extends React.Component {
 

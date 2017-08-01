@@ -1,23 +1,22 @@
-import React from "react";
-import {PropTypes} from "react";
-import {Link} from "react-router/es";
-import Translate from "react-translate-component";
-import AssetActions from "actions/AssetActions";
-import AssetStore from "stores/AssetStore";
-import AccountActions from "actions/AccountActions";
-import Trigger from "react-foundation-apps/src/trigger";
-import Modal from "react-foundation-apps/src/modal";
-import FormattedAsset from "../Utility/FormattedAsset";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import notify from "actions/NotificationActions";
-import utils from "common/utils";
-import {debounce} from "lodash";
-import LoadingIndicator from "../LoadingIndicator";
-import PrivateKeyStore from "stores/PrivateKeyStore";
-import IssueModal from "../Modal/IssueModal";
-import ReserveAssetModal from "../Modal/ReserveAssetModal";
-import { connect } from "alt-react";
-import assetUtils from "common/asset_utils";
+import React, {PropTypes} from 'react';
+import {Link} from 'react-router/es';
+import Translate from 'react-translate-component';
+import AssetActions from 'actions/AssetActions';
+import AssetStore from 'stores/AssetStore';
+import AccountActions from 'actions/AccountActions';
+import Trigger from 'react-foundation-apps/src/trigger';
+import Modal from 'react-foundation-apps/src/modal';
+import FormattedAsset from '../Utility/FormattedAsset';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import notify from 'actions/NotificationActions';
+import utils from 'common/utils';
+import {debounce} from 'lodash';
+import LoadingIndicator from '../LoadingIndicator';
+import PrivateKeyStore from 'stores/PrivateKeyStore';
+import IssueModal from '../Modal/IssueModal';
+import ReserveAssetModal from '../Modal/ReserveAssetModal';
+import {connect} from 'alt-react';
+import assetUtils from 'common/asset_utils';
 
 class AccountAssets extends React.Component {
     static defaultProps = {

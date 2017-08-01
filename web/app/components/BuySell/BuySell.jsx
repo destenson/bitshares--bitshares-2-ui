@@ -1,16 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import MarketsActions from "actions/MarketsActions";
-import utils from "common/utils";
-import connectToStores from "alt/utils/connectToStores";
-import MarketsStore from "stores/MarketsStore";
-import AccountStore from "stores/AccountStore";
-import SettingsStore from "stores/SettingsStore";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import SettingsActions from "actions/SettingsActions";
-import AssetName from "../Utility/AssetName";
-import { Apis } from "bitsharesjs-ws";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MarketsActions from 'actions/MarketsActions';
+import utils from 'common/utils';
+import connectToStores from 'alt/utils/connectToStores';
+import MarketsStore from 'stores/MarketsStore';
+import AccountStore from 'stores/AccountStore';
+import SettingsStore from 'stores/SettingsStore';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import SettingsActions from 'actions/SettingsActions';
+import AssetName from '../Utility/AssetName';
+import {Apis} from 'bitsharesjs-ws';
 
 require("./BuySell.scss");
 

@@ -1,11 +1,11 @@
-import React from "react";
-import counterpart from "counterpart";
-import utils from "common/utils";
-import LinkToAccountById from "../Blockchain/LinkToAccountById";
-import LinkToAssetById from "../Blockchain/LinkToAssetById";
-import {Link} from "react-router/es";
-import FormattedAsset from "../Utility/FormattedAsset";
-import FormattedPrice from "../Utility/FormattedPrice";
+import React from 'react';
+import counterpart from 'counterpart';
+import utils from 'common/utils';
+import LinkToAccountById from '../Blockchain/LinkToAccountById';
+import LinkToAssetById from '../Blockchain/LinkToAssetById';
+import {Link} from 'react-router/es';
+import FormattedAsset from '../Utility/FormattedAsset';
+import FormattedPrice from '../Utility/FormattedPrice';
 
 /**
  *  Given a string and a list of interpolation parameters, this component

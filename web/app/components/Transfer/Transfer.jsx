@@ -1,18 +1,18 @@
-import React from "react";
-import BalanceComponent from "../Utility/BalanceComponent";
-import AccountActions from "actions/AccountActions";
-import Translate from "react-translate-component";
-import AccountSelect from "../Forms/AccountSelect";
-import AccountSelector from "../Account/AccountSelector";
-import AccountStore from "stores/AccountStore";
-import AmountSelector from "../Utility/AmountSelector";
-import utils from "common/utils";
-import counterpart from "counterpart";
-import TransactionConfirmStore from "stores/TransactionConfirmStore";
-import { RecentTransactions } from "../Account/RecentTransactions";
-import Immutable from "immutable";
-import {ChainStore} from "bitsharesjs/es";
-import {connect} from "alt-react";
+import React from 'react';
+import BalanceComponent from '../Utility/BalanceComponent';
+import AccountActions from 'actions/AccountActions';
+import Translate from 'react-translate-component';
+import AccountSelect from '../Forms/AccountSelect';
+import AccountSelector from '../Account/AccountSelector';
+import AccountStore from 'stores/AccountStore';
+import AmountSelector from '../Utility/AmountSelector';
+import utils from 'common/utils';
+import counterpart from 'counterpart';
+import TransactionConfirmStore from 'stores/TransactionConfirmStore';
+import {RecentTransactions} from '../Account/RecentTransactions';
+import Immutable from 'immutable';
+import {ChainStore} from 'bitsharesjs/es';
+import {connect} from 'alt-react';
 
 class Transfer extends React.Component {
 

@@ -1,7 +1,7 @@
-import React from "react";
-import SettingsStore from "stores/SettingsStore";
-import AltContainer from "alt-container";
-import Fees from "./Fees";
+import React from 'react';
+import SettingsStore from 'stores/SettingsStore';
+import AltContainer from 'alt-container';
+import Fees from './Fees';
 
 class FeesContainer extends React.Component {
 

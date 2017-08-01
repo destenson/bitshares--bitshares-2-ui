@@ -1,20 +1,19 @@
-import React from "react";
-import { connect } from "alt-react";
-import AccountStore from "stores/AccountStore";
-import Translate from "react-translate-component";
-import Icon from "../Icon/Icon";
-import {ChainStore} from "bitsharesjs/es";
-import {debounce} from "lodash";
-import SettingsActions from "actions/SettingsActions";
-import SettingsStore from "stores/SettingsStore";
-import Peer from "peerjs";
-import utils from "common/utils";
-import counterpart from "counterpart";
-import LoadingIndicator from "../LoadingIndicator";
-import AccountActions from "actions/AccountActions";
-import TransactionConfirmStore from "stores/TransactionConfirmStore";
-import {FetchChainObjects} from "bitsharesjs/es";
-import TimeAgo from "../Utility/TimeAgo";
+import React from 'react';
+import {connect} from 'alt-react';
+import AccountStore from 'stores/AccountStore';
+import Translate from 'react-translate-component';
+import Icon from '../Icon/Icon';
+import {ChainStore, FetchChainObjects} from 'bitsharesjs/es';
+import {debounce} from 'lodash';
+import SettingsActions from 'actions/SettingsActions';
+import SettingsStore from 'stores/SettingsStore';
+import Peer from 'peerjs';
+import utils from 'common/utils';
+import counterpart from 'counterpart';
+import LoadingIndicator from '../LoadingIndicator';
+import AccountActions from 'actions/AccountActions';
+import TransactionConfirmStore from 'stores/TransactionConfirmStore';
+import TimeAgo from '../Utility/TimeAgo';
 
 const PROD = true;
 const hostConfig = PROD ? { // Prod config

@@ -1,5 +1,5 @@
-import React from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class TransitionWrapper extends React.Component {
 

@@ -1,4 +1,4 @@
-import assetConstants from "../chain/asset_constants";
+import assetConstants from '../chain/asset_constants';
 
 export default class AssetUtils {
     

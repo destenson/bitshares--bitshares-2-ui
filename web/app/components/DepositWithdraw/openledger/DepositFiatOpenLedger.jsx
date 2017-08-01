@@ -1,10 +1,10 @@
-import React from "react";
-import ChainTypes from "components/Utility/ChainTypes";
-import BindToChainState from "components/Utility/BindToChainState";
-import utils from "common/utils";
-import counterpart from "counterpart";
-import AmountSelector from "components/Utility/AmountSelector";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
+import React from 'react';
+import ChainTypes from 'components/Utility/ChainTypes';
+import BindToChainState from 'components/Utility/BindToChainState';
+import utils from 'common/utils';
+import counterpart from 'counterpart';
+import AmountSelector from 'components/Utility/AmountSelector';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
 
 class DepositFiatOpenLedger extends React.Component {
 

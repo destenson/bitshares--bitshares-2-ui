@@ -1,9 +1,9 @@
-import React, {PropTypes} from "react";
-import Translate from "react-translate-component";
-import cnames from "classnames";
-import { connect } from "alt-react";
-import SettingsActions from "actions/SettingsActions";
-import SettingsStore from "stores/SettingsStore";
+import React, {PropTypes} from 'react';
+import Translate from 'react-translate-component';
+import cnames from 'classnames';
+import {connect} from 'alt-react';
+import SettingsActions from 'actions/SettingsActions';
+import SettingsStore from 'stores/SettingsStore';
 
 /**
  *  Renders a tab layout, handling switching and optionally persists the currently open tab using the SettingsStore

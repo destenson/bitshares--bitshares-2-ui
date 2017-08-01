@@ -1,5 +1,5 @@
-import React from "react";
-import counterpart from "counterpart";
+import React from 'react';
+import counterpart from 'counterpart';
 
 export default class AccountSelect extends React.Component {
 

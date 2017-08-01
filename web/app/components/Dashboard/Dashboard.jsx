@@ -1,15 +1,16 @@
-import React from "react";
-import Immutable from "immutable";
-import DashboardList from "./DashboardList";
-import { RecentTransactions } from "../Account/RecentTransactions";
-import Translate from "react-translate-component";
-import MarketCard from "./MarketCard";
-import utils from "common/utils";
-import { Apis } from "bitsharesjs-ws";
+import React from 'react';
+import Immutable from 'immutable';
+import DashboardList from './DashboardList';
+import {RecentTransactions} from '../Account/RecentTransactions';
+import Translate from 'react-translate-component';
+import MarketCard from './MarketCard';
+import utils from 'common/utils';
+import {Apis} from 'bitsharesjs-ws';
+import LoadingIndicator from '../LoadingIndicator';
+import SettingsActions from 'actions/SettingsActions';
+import WalletUnlockActions from 'actions/WalletUnlockActions';
+
 var logo = require("assets/logo-ico-blue.png");
-import LoadingIndicator from "../LoadingIndicator";
-import SettingsActions from "actions/SettingsActions";
-import WalletUnlockActions from "actions/WalletUnlockActions";
 
 class Dashboard extends React.Component {
 

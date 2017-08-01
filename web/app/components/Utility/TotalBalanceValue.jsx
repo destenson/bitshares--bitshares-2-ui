@@ -1,15 +1,15 @@
-import React from "react";
-import FormattedAsset from "./FormattedAsset";
-import ChainTypes from "./ChainTypes";
-import BindToChainState from "./BindToChainState";
-import utils from "common/utils";
-import MarketsActions from "actions/MarketsActions";
-import {ChainStore} from "bitsharesjs/es";
-import { connect } from "alt-react";
-import MarketsStore from "stores/MarketsStore";
-import SettingsStore from "stores/SettingsStore";
-import Immutable from "immutable";
-import Translate from "react-translate-component";
+import React from 'react';
+import FormattedAsset from './FormattedAsset';
+import ChainTypes from './ChainTypes';
+import BindToChainState from './BindToChainState';
+import utils from 'common/utils';
+import MarketsActions from 'actions/MarketsActions';
+import {ChainStore} from 'bitsharesjs/es';
+import {connect} from 'alt-react';
+import MarketsStore from 'stores/MarketsStore';
+import SettingsStore from 'stores/SettingsStore';
+import Immutable from 'immutable';
+import Translate from 'react-translate-component';
 
 /**
  *  Given an asset amount, displays the equivalent value in baseAsset if possible

@@ -1,14 +1,14 @@
-import React from "react";
-import {Tabs, Tab} from "../Utility/Tabs";
-import constants from "chain/account_constants.js";
-import AccountSelector from "../Account/AccountSelector";
-import Immutable from "immutable";
-import Translate from "react-translate-component";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import LinkToAccountById from "../Blockchain/LinkToAccountById";
-import WalletApi from "api/WalletApi";
-import WalletDb from "stores/WalletDb.js";
+import React from 'react';
+import {Tab, Tabs} from '../Utility/Tabs';
+import constants from 'chain/account_constants.js';
+import AccountSelector from '../Account/AccountSelector';
+import Immutable from 'immutable';
+import Translate from 'react-translate-component';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import LinkToAccountById from '../Blockchain/LinkToAccountById';
+import WalletApi from 'api/WalletApi';
+import WalletDb from 'stores/WalletDb.js';
 
 let wallet_api = new WalletApi();
 

@@ -1,8 +1,8 @@
-import React from "react";
-import AssetName from "../Utility/AssetName";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import BalanceComponent from "../Utility/BalanceComponent";
+import React from 'react';
+import AssetName from '../Utility/AssetName';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import BalanceComponent from '../Utility/BalanceComponent';
 
 /**
  *  Given a balance_object, displays it in a pretty way

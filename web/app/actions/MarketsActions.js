@@ -1,11 +1,11 @@
-import alt from "alt-instance";
-import WalletApi from "api/WalletApi";
-import WalletDb from "stores/WalletDb";
-import {ChainStore} from "bitsharesjs/es";
-import {Apis} from "bitsharesjs-ws";
-import marketUtils from "common/market_utils";
-import accountUtils from "common/account_utils";
-import Immutable from "immutable";
+import alt from 'alt-instance';
+import WalletApi from 'api/WalletApi';
+import WalletDb from 'stores/WalletDb';
+import {ChainStore} from 'bitsharesjs/es';
+import {Apis} from 'bitsharesjs-ws';
+import marketUtils from 'common/market_utils';
+import accountUtils from 'common/account_utils';
+import Immutable from 'immutable';
 
 let subs = {};
 let currentBucketSize;

@@ -1,13 +1,13 @@
-import React from "react";
-import Translate from "react-translate-component";
-import ChainTypes from "components/Utility/ChainTypes";
-import BindToChainState from "components/Utility/BindToChainState";
-import Modal from "react-foundation-apps/src/modal";
-import Trigger from "react-foundation-apps/src/trigger";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import AccountBalance from "../../Account/AccountBalance";
-import TranswiserDepositModal from "./TranswiserDepositModal";
-import TranswiserWithdrawModal from "./TranswiserWithdrawModal";
+import React from 'react';
+import Translate from 'react-translate-component';
+import ChainTypes from 'components/Utility/ChainTypes';
+import BindToChainState from 'components/Utility/BindToChainState';
+import Modal from 'react-foundation-apps/src/modal';
+import Trigger from 'react-foundation-apps/src/trigger';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import AccountBalance from '../../Account/AccountBalance';
+import TranswiserDepositModal from './TranswiserDepositModal';
+import TranswiserWithdrawModal from './TranswiserWithdrawModal';
 
 class TranswiserDepositWithdraw extends React.Component {
 

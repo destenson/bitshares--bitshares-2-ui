@@ -1,10 +1,10 @@
-import React from "react";
-import {BackupRestore} from "../Wallet/Backup";
-import ImportKeys from "../Wallet/ImportKeys";
-import {CreateWalletFromBrainkey} from "../Wallet/WalletCreate";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
-import SettingsActions from "actions/SettingsActions";
+import React from 'react';
+import {BackupRestore} from '../Wallet/Backup';
+import ImportKeys from '../Wallet/ImportKeys';
+import {CreateWalletFromBrainkey} from '../Wallet/WalletCreate';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
+import SettingsActions from 'actions/SettingsActions';
 
 export default class RestoreSettings extends React.Component {
 

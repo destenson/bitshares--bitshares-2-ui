@@ -1,10 +1,10 @@
 /** Generic set of components for dealing with data in the ChainStore */
-import React, {Component, Children} from "react";
-import { connect } from "alt-react";
-import ChainTypes from "components/Utility/ChainTypes";
-import BindToChainState from "components/Utility/BindToChainState";
-import AccountStore from "stores/AccountStore";
-import {pairs} from "lodash";
+import React, {Children, Component} from 'react';
+import {connect} from 'alt-react';
+import ChainTypes from 'components/Utility/ChainTypes';
+import BindToChainState from 'components/Utility/BindToChainState';
+import AccountStore from 'stores/AccountStore';
+import {pairs} from 'lodash';
 
 class ResolveLinkedAccountsChainState extends Component {
 

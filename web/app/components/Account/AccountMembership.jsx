@@ -1,14 +1,14 @@
-import React from "react";
-import {Link} from "react-router/es";
-import Translate from "react-translate-component";
-import {ChainStore} from "bitsharesjs/es";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import Statistics from "./Statistics";
-import AccountActions from "actions/AccountActions";
-import TimeAgo from "../Utility/TimeAgo";
-import HelpContent from "../Utility/HelpContent";
-import accountUtils from "common/account_utils";
+import React from 'react';
+import {Link} from 'react-router/es';
+import Translate from 'react-translate-component';
+import {ChainStore} from 'bitsharesjs/es';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import Statistics from './Statistics';
+import AccountActions from 'actions/AccountActions';
+import TimeAgo from '../Utility/TimeAgo';
+import HelpContent from '../Utility/HelpContent';
+import accountUtils from 'common/account_utils';
 
 class FeeHelp extends React.Component {
     static propTypes = {

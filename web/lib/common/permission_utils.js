@@ -1,5 +1,5 @@
-import {ChainStore} from "bitsharesjs/es";
-import Immutable from "immutable";
+import {ChainStore} from 'bitsharesjs/es';
+import Immutable from 'immutable';
 
 let KeyAuth = function(auth) {
     this.id = auth.toJS ? auth.get(0) : auth[0];

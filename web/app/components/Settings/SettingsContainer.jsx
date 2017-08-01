@@ -1,8 +1,8 @@
-import React from "react";
-import SettingsStore from "stores/SettingsStore";
-import IntlStore from "stores/IntlStore";
-import AltContainer from "alt-container";
-import Settings from "./Settings";
+import React from 'react';
+import SettingsStore from 'stores/SettingsStore';
+import IntlStore from 'stores/IntlStore';
+import AltContainer from 'alt-container';
+import Settings from './Settings';
 
 class SettingsContainer extends React.Component {
 

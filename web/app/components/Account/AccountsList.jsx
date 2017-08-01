@@ -1,13 +1,13 @@
-import React from "react";
-import AccountSelector from "./AccountSelector";
-import Translate from "react-translate-component";
-import AccountImage from "./AccountImage";
-import {ChainStore} from "bitsharesjs/es";
-import ChainTypes from "../Utility/ChainTypes";
-import FormattedAsset from "../Utility/FormattedAsset";
-import BindToChainState from "../Utility/BindToChainState";
-import LinkToAccountById from "../Blockchain/LinkToAccountById";
-import counterpart from "counterpart";
+import React from 'react';
+import AccountSelector from './AccountSelector';
+import Translate from 'react-translate-component';
+import AccountImage from './AccountImage';
+import {ChainStore} from 'bitsharesjs/es';
+import ChainTypes from '../Utility/ChainTypes';
+import FormattedAsset from '../Utility/FormattedAsset';
+import BindToChainState from '../Utility/BindToChainState';
+import LinkToAccountById from '../Blockchain/LinkToAccountById';
+import counterpart from 'counterpart';
 
 function getWitnessOrCommittee(type, acct) {
     let url = "", votes = 0, account;

@@ -1,12 +1,10 @@
-import React from "react";
-import {PropTypes} from "react";
-import {FormattedDate} from "react-intl";
-import FormattedAsset from "../Utility/FormattedAsset";
+import React, {PropTypes} from 'react';
+import FormattedAsset from '../Utility/FormattedAsset';
 // import Ps from "perfect-scrollbar";
-import utils from "common/utils";
-import Translate from "react-translate-component";
-import AssetName from "../Utility/AssetName";
-import TimeAgo from "../Utility/TimeAgo";
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
+import AssetName from '../Utility/AssetName';
+import TimeAgo from '../Utility/TimeAgo';
 
 class TableHeader extends React.Component {
 

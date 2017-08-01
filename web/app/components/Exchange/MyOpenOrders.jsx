@@ -1,15 +1,14 @@
-import React from "react";
-import {PropTypes} from "react";
-import classNames from "classnames";
-import market_utils from "common/market_utils";
-import {FormattedDate} from "react-intl";
-import Ps from "perfect-scrollbar";
-import utils from "common/utils";
-import Translate from "react-translate-component";
-import PriceText from "../Utility/PriceText";
-import TransitionWrapper from "../Utility/TransitionWrapper";
-import AssetName from "../Utility/AssetName";
-import Icon from "../Icon/Icon";
+import React, {PropTypes} from 'react';
+import classNames from 'classnames';
+import market_utils from 'common/market_utils';
+import {FormattedDate} from 'react-intl';
+import Ps from 'perfect-scrollbar';
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
+import PriceText from '../Utility/PriceText';
+import TransitionWrapper from '../Utility/TransitionWrapper';
+import AssetName from '../Utility/AssetName';
+import Icon from '../Icon/Icon';
 
 class TableHeader extends React.Component {
 

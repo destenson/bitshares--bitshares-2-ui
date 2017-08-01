@@ -1,8 +1,8 @@
-import React, {Component} from "react";
-import AccountStore from "stores/AccountStore";
-import ChainTypes from "components/Utility/ChainTypes";
-import AccountSelect from "components/Forms/AccountSelect";
-import BindToChainState from "components/Utility/BindToChainState";
+import React, {Component} from 'react';
+import AccountStore from 'stores/AccountStore';
+import ChainTypes from 'components/Utility/ChainTypes';
+import AccountSelect from 'components/Forms/AccountSelect';
+import BindToChainState from 'components/Utility/BindToChainState';
 
 class MyAccounts extends Component {
 

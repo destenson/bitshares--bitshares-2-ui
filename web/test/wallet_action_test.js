@@ -1,23 +1,17 @@
-import iDB from "../src/idb-instance"
-import fakeIndexedDB from "fake-indexeddb"
+import iDB from '../src/idb-instance'
+import fakeIndexedDB from 'fake-indexeddb'
 
-import BackupActions, {
-    createWalletObject, createWalletBackup,
-    decryptWalletBackup
-} from "actions/BackupActions"
-import AccountActions from "../src/actions/AccountActions"
-import WalletActions from "../src/actions/WalletActions"
-import WalletDb from "../src/stores/WalletDb"
+import {createWalletBackup, createWalletObject, decryptWalletBackup} from 'actions/BackupActions'
+import WalletActions from '../src/actions/WalletActions'
+import WalletDb from '../src/stores/WalletDb'
 
-import ApiInstances from "../app/api/ApiInstances"
-import WalletApi from "../app/api/WalletApi"
-import ApplicationApi from "../app/api/ApplicationApi"
-import PrivateKey from "../src/ecc/key_private"
+import ApiInstances from '../app/api/ApiInstances'
+import PrivateKey from '../src/ecc/key_private'
 
-import th from "./test_helper"
-import secureRandom from "secure-random"
-import assert from "assert"
-import helper from "./test_helper"
+import th from './test_helper'
+import helper from './test_helper'
+import secureRandom from 'secure-random'
+import assert from 'assert'
 
 var _catch = th.log_error
 

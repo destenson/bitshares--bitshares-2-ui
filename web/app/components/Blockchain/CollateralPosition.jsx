@@ -1,16 +1,15 @@
-import React from "react";
-import FormattedAsset from "../Utility/FormattedAsset";
-import FormattedPrice from "../Utility/FormattedPrice";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import AssetName from "../Utility/AssetName";
-import BorrowModal from "../Modal/BorrowModal";
-import WalletApi from "api/WalletApi";
-import WalletDb from "stores/WalletDb";
-import Translate from "react-translate-component";
-import utils from "common/utils";
-import counterpart from "counterpart";
-import {Link} from "react-router";
+import React from 'react';
+import FormattedAsset from '../Utility/FormattedAsset';
+import FormattedPrice from '../Utility/FormattedPrice';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import AssetName from '../Utility/AssetName';
+import BorrowModal from '../Modal/BorrowModal';
+import WalletApi from 'api/WalletApi';
+import WalletDb from 'stores/WalletDb';
+import Translate from 'react-translate-component';
+import utils from 'common/utils';
+import counterpart from 'counterpart';
 
 const wallet_api = new WalletApi();
 /**

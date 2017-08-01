@@ -1,5 +1,5 @@
-import alt from "alt-instance";
-import NotificationActions from "actions/NotificationActions";
+import alt from 'alt-instance';
+import NotificationActions from 'actions/NotificationActions';
 
 class NotificationStore {
 

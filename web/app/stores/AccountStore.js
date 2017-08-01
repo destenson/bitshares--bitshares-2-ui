@@ -1,16 +1,16 @@
-import BaseStore from "./BaseStore";
-import Immutable from "immutable";
-import alt from "alt-instance";
-import AccountActions from "actions/AccountActions";
-import SettingsActions from "actions/SettingsActions";
-import iDB from "idb-instance";
-import PrivateKeyStore from "./PrivateKeyStore";
-import {ChainStore, ChainValidation, FetchChain} from "bitsharesjs/es";
-import {Apis} from "bitsharesjs-ws";
-import AccountRefsStore from "stores/AccountRefsStore";
-import AddressIndex from "stores/AddressIndex";
-import SettingsStore from "stores/SettingsStore";
-import ls from "common/localStorage";
+import BaseStore from './BaseStore';
+import Immutable from 'immutable';
+import alt from 'alt-instance';
+import AccountActions from 'actions/AccountActions';
+import SettingsActions from 'actions/SettingsActions';
+import iDB from 'idb-instance';
+import PrivateKeyStore from './PrivateKeyStore';
+import {ChainStore, ChainValidation, FetchChain} from 'bitsharesjs/es';
+import {Apis} from 'bitsharesjs-ws';
+import AccountRefsStore from 'stores/AccountRefsStore';
+import AddressIndex from 'stores/AddressIndex';
+import SettingsStore from 'stores/SettingsStore';
+import ls from 'common/localStorage';
 
 let accountStorage = new ls("__graphene__");
 
@@ -402,7 +402,7 @@ class AccountStore extends BaseStore {
         this.state.unFollowedAccounts = this.state.unFollowedAccounts.add(name);
         this.checkAccountRefs();
         // Limit to maxEntries accounts
-        let maxEntries = 50;
+        let maxEntries = 500;
         if (this.state.unFollowedAccounts.size > maxEntries) {
             this.state.unFollowedAccounts = this.state.unFollowedAccounts.takeLast(maxEntries);
         }

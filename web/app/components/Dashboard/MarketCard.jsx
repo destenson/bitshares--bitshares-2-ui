@@ -1,13 +1,13 @@
-import React from "react";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import AssetName from "../Utility/AssetName";
-import cnames from "classnames";
-import MarketsActions from "actions/MarketsActions";
-import MarketsStore from "stores/MarketsStore";
-import { connect } from "alt-react";
-import utils from "common/utils";
-import Translate from "react-translate-component";
+import React from 'react';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import AssetName from '../Utility/AssetName';
+import cnames from 'classnames';
+import MarketsActions from 'actions/MarketsActions';
+import MarketsStore from 'stores/MarketsStore';
+import {connect} from 'alt-react';
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
 
 class MarketCard extends React.Component {
 

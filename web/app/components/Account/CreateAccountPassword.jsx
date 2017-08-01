@@ -1,22 +1,22 @@
-import React from "react";
-import { connect } from "alt-react";
-import classNames from "classnames";
-import AccountActions from "actions/AccountActions";
-import AccountStore from "stores/AccountStore";
-import AccountNameInput from "./../Forms/AccountNameInput";
-import WalletDb from "stores/WalletDb";
-import notify from "actions/NotificationActions";
-import {Link} from "react-router/es";
-import AccountSelect from "../Forms/AccountSelect";
-import TransactionConfirmStore from "stores/TransactionConfirmStore";
-import LoadingIndicator from "../LoadingIndicator";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
-import {ChainStore, FetchChain, key} from "bitsharesjs/es";
-import ReactTooltip from "react-tooltip";
-import utils from "common/utils";
-import SettingsActions from "actions/SettingsActions";
-import WalletUnlockActions from "actions/WalletUnlockActions";
+import React from 'react';
+import {connect} from 'alt-react';
+import classNames from 'classnames';
+import AccountActions from 'actions/AccountActions';
+import AccountStore from 'stores/AccountStore';
+import AccountNameInput from './../Forms/AccountNameInput';
+import WalletDb from 'stores/WalletDb';
+import notify from 'actions/NotificationActions';
+import {Link} from 'react-router/es';
+import AccountSelect from '../Forms/AccountSelect';
+import TransactionConfirmStore from 'stores/TransactionConfirmStore';
+import LoadingIndicator from '../LoadingIndicator';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
+import {ChainStore, FetchChain, key} from 'bitsharesjs/es';
+import ReactTooltip from 'react-tooltip';
+import utils from 'common/utils';
+import SettingsActions from 'actions/SettingsActions';
+import WalletUnlockActions from 'actions/WalletUnlockActions';
 
 class CreateAccountPassword extends React.Component {
     constructor() {

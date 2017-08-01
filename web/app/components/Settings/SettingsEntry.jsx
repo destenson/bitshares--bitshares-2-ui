@@ -1,7 +1,7 @@
-import React from "react";
-import counterpart from "counterpart";
-import Translate from "react-translate-component";
-import SettingsActions from "actions/SettingsActions";
+import React from 'react';
+import counterpart from 'counterpart';
+import Translate from 'react-translate-component';
+import SettingsActions from 'actions/SettingsActions';
 
 export default class SettingsEntry extends React.Component {
 

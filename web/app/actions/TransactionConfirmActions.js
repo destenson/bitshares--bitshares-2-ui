@@ -1,5 +1,5 @@
-import alt from "alt-instance";
-import {ChainConfig} from "bitsharesjs-ws";
+import alt from 'alt-instance';
+import {ChainConfig} from 'bitsharesjs-ws';
 
 class TransactionConfirmActions {
 

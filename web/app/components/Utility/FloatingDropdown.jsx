@@ -1,5 +1,5 @@
-import React from "react";
-import utils from "common/utils";
+import React from 'react';
+import utils from 'common/utils';
 
 class Dropdown extends React.Component {
 

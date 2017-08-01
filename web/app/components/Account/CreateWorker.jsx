@@ -1,10 +1,10 @@
-import React from "react";
-import { connect } from "alt-react";
-import ApplicationApi from "api/ApplicationApi";
-import AccountStore from "stores/AccountStore";
-import utils from "common/utils";
-import notify from "actions/NotificationActions";
-import Translate from "react-translate-component";
+import React from 'react';
+import {connect} from 'alt-react';
+import ApplicationApi from 'api/ApplicationApi';
+import AccountStore from 'stores/AccountStore';
+import utils from 'common/utils';
+import notify from 'actions/NotificationActions';
+import Translate from 'react-translate-component';
 
 const application_api = new ApplicationApi();
 

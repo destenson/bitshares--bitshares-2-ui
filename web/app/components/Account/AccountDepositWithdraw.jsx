@@ -1,25 +1,25 @@
-import React from "react";
-import { connect } from "alt-react";
-import accountUtils from "common/account_utils";
-import utils from "common/utils";
-import Translate from "react-translate-component";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import TranswiserDepositWithdraw from "../DepositWithdraw/transwiser/TranswiserDepositWithdraw";
-import BlockTradesGateway from "../DepositWithdraw/BlockTradesGateway";
-import OpenLedgerFiatDepositWithdrawal from "../DepositWithdraw/openledger/OpenLedgerFiatDepositWithdrawal";
-import OpenLedgerFiatTransactionHistory from "../DepositWithdraw/openledger/OpenLedgerFiatTransactionHistory";
-import BlockTradesBridgeDepositRequest from "../DepositWithdraw/blocktrades/BlockTradesBridgeDepositRequest";
-import HelpContent from "../Utility/HelpContent";
-import AccountStore from "stores/AccountStore";
-import SettingsStore from "stores/SettingsStore";
-import SettingsActions from "actions/SettingsActions";
-import { Apis } from "bitsharesjs-ws";
-import { settingsAPIs } from "api/apiConfig";
-import BitKapital from "../DepositWithdraw/BitKapital";
-import GatewayStore from "stores/GatewayStore";
-import GatewayActions from "actions/GatewayActions";
-import AccountImage from "../Account/AccountImage";
+import React from 'react';
+import {connect} from 'alt-react';
+import accountUtils from 'common/account_utils';
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import TranswiserDepositWithdraw from '../DepositWithdraw/transwiser/TranswiserDepositWithdraw';
+import BlockTradesGateway from '../DepositWithdraw/BlockTradesGateway';
+import OpenLedgerFiatDepositWithdrawal from '../DepositWithdraw/openledger/OpenLedgerFiatDepositWithdrawal';
+import OpenLedgerFiatTransactionHistory from '../DepositWithdraw/openledger/OpenLedgerFiatTransactionHistory';
+import BlockTradesBridgeDepositRequest from '../DepositWithdraw/blocktrades/BlockTradesBridgeDepositRequest';
+import HelpContent from '../Utility/HelpContent';
+import AccountStore from 'stores/AccountStore';
+import SettingsStore from 'stores/SettingsStore';
+import SettingsActions from 'actions/SettingsActions';
+import {Apis} from 'bitsharesjs-ws';
+import {settingsAPIs} from 'api/apiConfig';
+import BitKapital from '../DepositWithdraw/BitKapital';
+import GatewayStore from 'stores/GatewayStore';
+import GatewayActions from 'actions/GatewayActions';
+import AccountImage from '../Account/AccountImage';
 
 class AccountDepositWithdraw extends React.Component {
 

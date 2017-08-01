@@ -1,5 +1,5 @@
-import React from "react";
-import MyMarkets from "./MyMarkets";
+import React from 'react';
+import MyMarkets from './MyMarkets';
 
 class Markets extends React.Component {
 

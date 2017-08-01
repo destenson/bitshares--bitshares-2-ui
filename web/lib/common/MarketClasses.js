@@ -1,4 +1,4 @@
-import {Fraction} from "fractional";
+import {Fraction} from 'fractional';
 
 const GRAPHENE_100_PERCENT = 10000;
 

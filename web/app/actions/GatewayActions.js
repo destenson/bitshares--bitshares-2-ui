@@ -1,6 +1,6 @@
-import alt from "alt-instance";
-import { fetchCoins, fetchBridgeCoins, getBackedCoins, getActiveWallets } from "common/blockTradesMethods";
-import {blockTradesAPIs} from "api/apiConfig";
+import alt from 'alt-instance';
+import {fetchBridgeCoins, fetchCoins, getActiveWallets, getBackedCoins} from 'common/blockTradesMethods';
+import {blockTradesAPIs} from 'api/apiConfig';
 
 let inProgress = {};
 

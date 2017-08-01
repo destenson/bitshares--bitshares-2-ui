@@ -1,6 +1,6 @@
-import React from "react";
-import ChainTypes from "components/Utility/ChainTypes";
-import BindToChainState from "components/Utility/BindToChainState";
+import React from 'react';
+import ChainTypes from 'components/Utility/ChainTypes';
+import BindToChainState from 'components/Utility/BindToChainState';
 
 class OpenLedgerFiatTransactionHistory extends React.Component {
     static propTypes = {

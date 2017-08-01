@@ -1,11 +1,11 @@
-import React, {Component} from "react";
-import { connect } from "alt-react";
-import LoadingIndicator from "components/LoadingIndicator";
-import PrivateKeyStore from "stores/PrivateKeyStore";
-import BalanceClaimActiveStore from "stores/BalanceClaimActiveStore";
-import BalanceClaimActiveActions from "actions/BalanceClaimActiveActions";
-import FormattedAsset from "components/Utility/FormattedAsset";
-import Translate from "react-translate-component";
+import React, {Component} from 'react';
+import {connect} from 'alt-react';
+import LoadingIndicator from 'components/LoadingIndicator';
+import PrivateKeyStore from 'stores/PrivateKeyStore';
+import BalanceClaimActiveStore from 'stores/BalanceClaimActiveStore';
+import BalanceClaimActiveActions from 'actions/BalanceClaimActiveActions';
+import FormattedAsset from 'components/Utility/FormattedAsset';
+import Translate from 'react-translate-component';
 
 class BalanceClaimByAsset extends Component {
 

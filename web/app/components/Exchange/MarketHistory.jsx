@@ -1,19 +1,19 @@
-import React from "react";
-import {PropTypes} from "react";
-import {Link} from "react-router/es";
-import Immutable from "immutable";
-import Ps from "perfect-scrollbar";
-import utils from "common/utils";
-import Translate from "react-translate-component";
-import market_utils from "common/market_utils";
-import PriceText from "../Utility/PriceText";
-import cnames from "classnames";
-import SettingsActions from "actions/SettingsActions";
-import SettingsStore from "stores/SettingsStore";
-import { connect } from "alt-react";
-import TransitionWrapper from "../Utility/TransitionWrapper";
-import AssetName from "../Utility/AssetName";
-import { ChainTypes as grapheneChainTypes } from "bitsharesjs/es";
+import React, {PropTypes} from 'react';
+import {Link} from 'react-router/es';
+import Immutable from 'immutable';
+import Ps from 'perfect-scrollbar';
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
+import market_utils from 'common/market_utils';
+import PriceText from '../Utility/PriceText';
+import cnames from 'classnames';
+import SettingsActions from 'actions/SettingsActions';
+import SettingsStore from 'stores/SettingsStore';
+import {connect} from 'alt-react';
+import TransitionWrapper from '../Utility/TransitionWrapper';
+import AssetName from '../Utility/AssetName';
+import {ChainTypes as grapheneChainTypes} from 'bitsharesjs/es';
+
 const {operations} = grapheneChainTypes;
 
 class MarketHistory extends React.Component {

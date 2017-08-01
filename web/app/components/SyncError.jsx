@@ -1,13 +1,13 @@
-import React from "react";
-import { connect } from "alt-react";
-import BlockchainStore from "stores/BlockchainStore";
-import SettingsStore from "stores/SettingsStore";
-import Translate from "react-translate-component";
-import SettingsActions from "actions/SettingsActions";
-import {Apis} from "bitsharesjs-ws";
-import Icon from "./Icon/Icon";
-import WebsocketAddModal from "./Settings/WebsocketAddModal";
-import counterpart from "counterpart";
+import React from 'react';
+import {connect} from 'alt-react';
+import BlockchainStore from 'stores/BlockchainStore';
+import SettingsStore from 'stores/SettingsStore';
+import Translate from 'react-translate-component';
+import SettingsActions from 'actions/SettingsActions';
+import {Apis} from 'bitsharesjs-ws';
+import Icon from './Icon/Icon';
+import WebsocketAddModal from './Settings/WebsocketAddModal';
+import counterpart from 'counterpart';
 
 class SyncError extends React.Component {
 

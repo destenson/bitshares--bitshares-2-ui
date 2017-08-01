@@ -1,14 +1,14 @@
-import React from "react";
-import AccountActions from "actions/AccountActions";
-import AccountStore from "stores/AccountStore";
-import SettingsStore from "stores/SettingsStore";
-import WalletUnlockStore from "stores/WalletUnlockStore";
-import GatewayStore from "stores/GatewayStore";
-import AccountLeftPanel from "./AccountLeftPanel";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import { connect } from "alt-react";
-import accountUtils from "common/account_utils";
+import React from 'react';
+import AccountActions from 'actions/AccountActions';
+import AccountStore from 'stores/AccountStore';
+import SettingsStore from 'stores/SettingsStore';
+import WalletUnlockStore from 'stores/WalletUnlockStore';
+import GatewayStore from 'stores/GatewayStore';
+import AccountLeftPanel from './AccountLeftPanel';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import {connect} from 'alt-react';
+import accountUtils from 'common/account_utils';
 
 class AccountPage extends React.Component {
 

@@ -1,11 +1,11 @@
-import React, {Component} from "react";
-import {Link} from "react-router";
-import Translate from "react-translate-component";
-import notify from "actions/NotificationActions";
-import cname from "classnames";
-import WalletDb from "stores/WalletDb";
-import PasswordConfirm from "./PasswordConfirm";
-import counterpart from "counterpart";
+import React, {Component} from 'react';
+import {Link} from 'react-router';
+import Translate from 'react-translate-component';
+import notify from 'actions/NotificationActions';
+import cname from 'classnames';
+import WalletDb from 'stores/WalletDb';
+import PasswordConfirm from './PasswordConfirm';
+import counterpart from 'counterpart';
 
 export default class WalletChangePassword extends Component {
     constructor() {

@@ -1,18 +1,18 @@
-import React, {PropTypes, Component} from "react";
-import {Link} from "react-router";
-import {FormattedDate} from "react-intl";
-import { connect } from "alt-react";
-import WalletActions from "actions/WalletActions";
-import WalletManagerStore from "stores/WalletManagerStore";
-import BackupStore from "stores/BackupStore";
-import WalletDb from "stores/WalletDb";
-import BackupActions, {backup, decryptWalletBackup} from "actions/BackupActions";
-import notify from "actions/NotificationActions";
-import {saveAs} from "file-saver";
-import cname from "classnames";
-import Translate from "react-translate-component";
-import {ChainConfig} from "bitsharesjs-ws";
-import {PrivateKey} from "bitsharesjs/es";
+import React, {Component, PropTypes} from 'react';
+import {Link} from 'react-router';
+import {FormattedDate} from 'react-intl';
+import {connect} from 'alt-react';
+import WalletActions from 'actions/WalletActions';
+import WalletManagerStore from 'stores/WalletManagerStore';
+import BackupStore from 'stores/BackupStore';
+import WalletDb from 'stores/WalletDb';
+import BackupActions, {backup, decryptWalletBackup} from 'actions/BackupActions';
+import notify from 'actions/NotificationActions';
+import {saveAs} from 'file-saver';
+import cname from 'classnames';
+import Translate from 'react-translate-component';
+import {ChainConfig} from 'bitsharesjs-ws';
+import {PrivateKey} from 'bitsharesjs/es';
 
 const connectObject = {
     listenTo() {

@@ -1,6 +1,6 @@
 // look for more icons here https://linearicons.com/free or here http://hawcons.com/preview/
 
-import React from "react";
+import React from 'react';
 
 let icons = ["user", "trash", "chevron-down", "menu", "database", "search",
     "plus-circle", "question-circle", "cross-circle", "cog", "layers", "users", "wand", "b-logo",

@@ -1,8 +1,7 @@
-import React from "react";
-import {PropTypes, Component} from "react";
-import cname from "classnames";
-import Translate from "react-translate-component";
-import pw from "zxcvbn";
+import React, {Component, PropTypes} from 'react';
+import cname from 'classnames';
+import Translate from 'react-translate-component';
+import pw from 'zxcvbn';
 
 class PasswordInput extends Component {
 

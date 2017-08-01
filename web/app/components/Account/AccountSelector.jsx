@@ -1,15 +1,15 @@
-import React from "react";
-import utils from "common/utils";
-import AccountImage from "../Account/AccountImage";
-import Translate from "react-translate-component";
-import { ChainStore, PublicKey, ChainValidation } from "bitsharesjs/es";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import classnames from "classnames";
-import counterpart from "counterpart";
-import Icon from "../Icon/Icon";
-import accountUtils from "common/account_utils";
-import FloatingDropdown from "../Utility/FloatingDropdown";
+import React from 'react';
+import utils from 'common/utils';
+import AccountImage from '../Account/AccountImage';
+import Translate from 'react-translate-component';
+import {ChainStore, ChainValidation, PublicKey} from 'bitsharesjs/es';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import classnames from 'classnames';
+import counterpart from 'counterpart';
+import Icon from '../Icon/Icon';
+import accountUtils from 'common/account_utils';
+import FloatingDropdown from '../Utility/FloatingDropdown';
 
 /**
  * @brief Allows the user to enter an account by name or #ID

@@ -1,17 +1,17 @@
-import React from "react";
-import Translate from "react-translate-component";
-import ChainTypes from "components/Utility/ChainTypes";
-import BindToChainState from "components/Utility/BindToChainState";
-import Modal from "react-foundation-apps/src/modal";
-import Trigger from "react-foundation-apps/src/trigger";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import AccountBalance from "../../Account/AccountBalance";
-import WithdrawModalBlocktrades from "./WithdrawModalBlocktrades";
-import BlockTradesDepositAddressCache from "common/BlockTradesDepositAddressCache";
-import utils from "common/utils";
-import AccountActions from "actions/AccountActions";
-import TransactionConfirmStore from "stores/TransactionConfirmStore";
-import { blockTradesAPIs } from "api/apiConfig";
+import React from 'react';
+import Translate from 'react-translate-component';
+import ChainTypes from 'components/Utility/ChainTypes';
+import BindToChainState from 'components/Utility/BindToChainState';
+import Modal from 'react-foundation-apps/src/modal';
+import Trigger from 'react-foundation-apps/src/trigger';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import AccountBalance from '../../Account/AccountBalance';
+import WithdrawModalBlocktrades from './WithdrawModalBlocktrades';
+import BlockTradesDepositAddressCache from 'common/BlockTradesDepositAddressCache';
+import utils from 'common/utils';
+import AccountActions from 'actions/AccountActions';
+import TransactionConfirmStore from 'stores/TransactionConfirmStore';
+import {blockTradesAPIs} from 'api/apiConfig';
 
 class ButtonConversion extends React.Component {
     static propTypes = {

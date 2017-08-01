@@ -1,8 +1,8 @@
-import React from "react";
-import BindToChainState from "../Utility/BindToChainState";
-import ChainTypes from "../Utility/ChainTypes";
-import TimeAgo from "../Utility/TimeAgo";
-import utils from "common/utils";
+import React from 'react';
+import BindToChainState from '../Utility/BindToChainState';
+import ChainTypes from '../Utility/ChainTypes';
+import TimeAgo from '../Utility/TimeAgo';
+import utils from 'common/utils';
 
 /**
  * @brief displays block's date and time based on block number

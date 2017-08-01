@@ -1,4 +1,4 @@
-import t from "tcomb";
+import t from 'tcomb';
 
 let Asset = t.struct({
     bitasset_data_id: t.maybe(t.Str),

@@ -1,9 +1,9 @@
-import React from "react";
-import MarketsStore from "stores/MarketsStore";
-import AssetStore from "stores/AssetStore";
-import SettingsStore from "stores/SettingsStore";
-import AltContainer from "alt-container";
-import Markets from "./Markets";
+import React from 'react';
+import MarketsStore from 'stores/MarketsStore';
+import AssetStore from 'stores/AssetStore';
+import SettingsStore from 'stores/SettingsStore';
+import AltContainer from 'alt-container';
+import Markets from './Markets';
 
 class MarketsContainer extends React.Component {
 

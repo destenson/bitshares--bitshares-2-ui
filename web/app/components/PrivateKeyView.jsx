@@ -1,10 +1,10 @@
-import React, {Component} from "react";
-import Modal from "react-foundation-apps/src/modal";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import WalletUnlockActions from "actions/WalletUnlockActions";
-import WalletDb from "stores/WalletDb";
-import Translate from "react-translate-component";
-import PrivateKeyStore from "stores/PrivateKeyStore";
+import React, {Component} from 'react';
+import Modal from 'react-foundation-apps/src/modal';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import WalletUnlockActions from 'actions/WalletUnlockActions';
+import WalletDb from 'stores/WalletDb';
+import Translate from 'react-translate-component';
+import PrivateKeyStore from 'stores/PrivateKeyStore';
 
 export default class PrivateKeyView extends Component {
 

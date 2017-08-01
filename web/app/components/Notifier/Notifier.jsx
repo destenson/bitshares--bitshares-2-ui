@@ -1,11 +1,12 @@
-import React from "react";
-import Notification from "react-foundation-apps/src/notification";
-import ZfApi from "react-foundation-apps/src/utils/foundation-api";
-import Operation from "../Blockchain/Operation";
-import Immutable from "immutable";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import {ChainTypes as GraphChainTypes} from "bitsharesjs/es";
+import React from 'react';
+import Notification from 'react-foundation-apps/src/notification';
+import ZfApi from 'react-foundation-apps/src/utils/foundation-api';
+import Operation from '../Blockchain/Operation';
+import Immutable from 'immutable';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import {ChainTypes as GraphChainTypes} from 'bitsharesjs/es';
+
 let {operations} = GraphChainTypes;
 
 let ops = Object.keys(operations);

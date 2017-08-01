@@ -1,10 +1,10 @@
-import React from "react";
-import BalanceComponent from "../Utility/BalanceComponent";
-import AccountImage from "../Account/AccountImage";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import AccountStore from "stores/AccountStore";
-import {ChainStore} from "bitsharesjs/es";
+import React from 'react';
+import BalanceComponent from '../Utility/BalanceComponent';
+import AccountImage from '../Account/AccountImage';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import AccountStore from 'stores/AccountStore';
+import {ChainStore} from 'bitsharesjs/es';
 
 /**
  *  @brief displays the summary of a given account in a condenced view (for the dashboard)

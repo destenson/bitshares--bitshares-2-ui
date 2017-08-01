@@ -1,15 +1,15 @@
-import React from "react";
-import MarketsStore from "stores/MarketsStore";
-import AccountStore from "stores/AccountStore";
-import SettingsStore from "stores/SettingsStore";
-import GatewayStore from "stores/GatewayStore";
-import AltContainer from "alt-container";
-import Exchange from "./Exchange";
-import ChainTypes from "../Utility/ChainTypes";
-import LoadingIndicator from "../LoadingIndicator";
-import { EmitterInstance } from "bitsharesjs/es";
-import BindToChainState from "../Utility/BindToChainState";
-import MarketsActions from "actions/MarketsActions";
+import React from 'react';
+import MarketsStore from 'stores/MarketsStore';
+import AccountStore from 'stores/AccountStore';
+import SettingsStore from 'stores/SettingsStore';
+import GatewayStore from 'stores/GatewayStore';
+import AltContainer from 'alt-container';
+import Exchange from './Exchange';
+import ChainTypes from '../Utility/ChainTypes';
+import LoadingIndicator from '../LoadingIndicator';
+import {EmitterInstance} from 'bitsharesjs/es';
+import BindToChainState from '../Utility/BindToChainState';
+import MarketsActions from 'actions/MarketsActions';
 
 class ExchangeContainer extends React.Component {
 

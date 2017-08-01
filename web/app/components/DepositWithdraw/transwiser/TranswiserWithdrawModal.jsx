@@ -1,14 +1,14 @@
-import React from "react";
-import Trigger from "react-foundation-apps/src/trigger";
-import Translate from "react-translate-component";
-import ChainTypes from "components/Utility/ChainTypes";
-import {ChainStore} from "bitsharesjs/es";
-import BindToChainState from "components/Utility/BindToChainState";
-import utils from "common/utils";
-import BalanceComponent from "components/Utility/BalanceComponent";
-import counterpart from "counterpart";
-import AmountSelector from "components/Utility/AmountSelector";
-import AccountActions from "actions/AccountActions";
+import React from 'react';
+import Trigger from 'react-foundation-apps/src/trigger';
+import Translate from 'react-translate-component';
+import ChainTypes from 'components/Utility/ChainTypes';
+import {ChainStore} from 'bitsharesjs/es';
+import BindToChainState from 'components/Utility/BindToChainState';
+import utils from 'common/utils';
+import BalanceComponent from 'components/Utility/BalanceComponent';
+import counterpart from 'counterpart';
+import AmountSelector from 'components/Utility/AmountSelector';
+import AccountActions from 'actions/AccountActions';
 
 class TranswiserWithdrawModal extends React.Component {
 

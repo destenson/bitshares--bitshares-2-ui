@@ -1,19 +1,20 @@
-import React from "react";
-import FormattedAsset from "../Utility/FormattedAsset";
-import {Link} from "react-router/es";
-import classNames from "classnames";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
-import market_utils from "common/market_utils";
-import utils from "common/utils";
-import LinkToAccountById from "../Blockchain/LinkToAccountById";
-import LinkToAssetById from "../Blockchain/LinkToAssetById";
-import BindToChainState from "../Utility/BindToChainState";
-import FormattedPrice from "../Utility/FormattedPrice";
-import {ChainStore, ChainTypes as grapheneChainTypes} from "bitsharesjs/es";
-import account_constants from "chain/account_constants";
-import MemoText from "./MemoText";
-import TranslateWithLinks from "../Utility/TranslateWithLinks";
+import React from 'react';
+import FormattedAsset from '../Utility/FormattedAsset';
+import {Link} from 'react-router/es';
+import classNames from 'classnames';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
+import market_utils from 'common/market_utils';
+import utils from 'common/utils';
+import LinkToAccountById from '../Blockchain/LinkToAccountById';
+import LinkToAssetById from '../Blockchain/LinkToAssetById';
+import BindToChainState from '../Utility/BindToChainState';
+import FormattedPrice from '../Utility/FormattedPrice';
+import {ChainStore, ChainTypes as grapheneChainTypes} from 'bitsharesjs/es';
+import account_constants from 'chain/account_constants';
+import MemoText from './MemoText';
+import TranslateWithLinks from '../Utility/TranslateWithLinks';
+
 const {operations} = grapheneChainTypes;
 
 require("./operations.scss");

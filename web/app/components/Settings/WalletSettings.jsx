@@ -1,9 +1,9 @@
-import React from "react";
-import { ChangeActiveWallet, WalletDelete} from "../Wallet/WalletManager";
-import BalanceClaimActive from "../Wallet/BalanceClaimActive";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
-import WalletDb from "stores/WalletDb";
+import React from 'react';
+import {ChangeActiveWallet, WalletDelete} from '../Wallet/WalletManager';
+import BalanceClaimActive from '../Wallet/BalanceClaimActive';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
+import WalletDb from 'stores/WalletDb';
 
 export default class WalletSettings extends React.Component {
 

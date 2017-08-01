@@ -1,12 +1,11 @@
-import Immutable from "immutable";
-import alt from "alt-instance";
-import MarketsActions from "actions/MarketsActions";
-import market_utils from "common/market_utils";
-import ls from "common/localStorage";
-import {ChainStore} from "bitsharesjs/es";
-import utils from "common/utils";
-import {LimitOrder, CallOrder, FeedPrice, SettleOrder, Asset,
-    didOrdersChange, Price} from "common/MarketClasses";
+import Immutable from 'immutable';
+import alt from 'alt-instance';
+import MarketsActions from 'actions/MarketsActions';
+import market_utils from 'common/market_utils';
+import ls from 'common/localStorage';
+import {ChainStore} from 'bitsharesjs/es';
+import utils from 'common/utils';
+import {Asset, CallOrder, didOrdersChange, FeedPrice, LimitOrder, Price, SettleOrder} from 'common/MarketClasses';
 
 // import {
 //     SettleOrder

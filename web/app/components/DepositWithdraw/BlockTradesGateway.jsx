@@ -1,13 +1,12 @@
-import React from "react";
-import BlockTradesGatewayDepositRequest from "../DepositWithdraw/blocktrades/BlockTradesGatewayDepositRequest";
-import Translate from "react-translate-component";
-import { connect } from "alt-react";
-import SettingsStore from "stores/SettingsStore";
-import SettingsActions from "actions/SettingsActions";
-import { RecentTransactions, TransactionWrapper } from "components/Account/RecentTransactions";
-import Immutable from "immutable";
-import cnames from "classnames";
-import LoadingIndicator from "../LoadingIndicator";
+import React from 'react';
+import BlockTradesGatewayDepositRequest from '../DepositWithdraw/blocktrades/BlockTradesGatewayDepositRequest';
+import Translate from 'react-translate-component';
+import {connect} from 'alt-react';
+import SettingsStore from 'stores/SettingsStore';
+import SettingsActions from 'actions/SettingsActions';
+import {RecentTransactions, TransactionWrapper} from 'components/Account/RecentTransactions';
+import Immutable from 'immutable';
+import LoadingIndicator from '../LoadingIndicator';
 
 class BlockTradesGateway extends React.Component {
     constructor(props) {

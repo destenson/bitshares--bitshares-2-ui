@@ -1,16 +1,15 @@
-import React from "react";
-import {PropTypes} from "react";
-import classNames from "classnames";
-import utils from "common/utils";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
-import PriceText from "../Utility/PriceText";
-import AssetName from "../Utility/AssetName";
-import SimpleDepositWithdraw from "../Dashboard/SimpleDepositWithdraw";
-import SimpleDepositBlocktradesBridge from "../Dashboard/SimpleDepositBlocktradesBridge";
-import {Asset} from "common/MarketClasses";
+import React, {PropTypes} from 'react';
+import classNames from 'classnames';
+import utils from 'common/utils';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
+import PriceText from '../Utility/PriceText';
+import AssetName from '../Utility/AssetName';
+import SimpleDepositWithdraw from '../Dashboard/SimpleDepositWithdraw';
+import SimpleDepositBlocktradesBridge from '../Dashboard/SimpleDepositBlocktradesBridge';
+import {Asset} from 'common/MarketClasses';
 
 class BuySell extends React.Component {
 

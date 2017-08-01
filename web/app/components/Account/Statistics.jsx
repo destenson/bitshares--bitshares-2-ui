@@ -1,8 +1,8 @@
-import React from "react";
-import Translate from "react-translate-component";
-import FormattedAsset from "../Utility/FormattedAsset";
-import ChainTypes from "../Utility/ChainTypes";
-import BindToChainState from "../Utility/BindToChainState";
+import React from 'react';
+import Translate from 'react-translate-component';
+import FormattedAsset from '../Utility/FormattedAsset';
+import ChainTypes from '../Utility/ChainTypes';
+import BindToChainState from '../Utility/BindToChainState';
 
 class Statistics extends React.Component {
 

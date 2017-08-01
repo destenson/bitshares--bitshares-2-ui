@@ -1,4 +1,4 @@
-import alt from "alt-instance";
+import alt from 'alt-instance';
 
 var locales = {};
 if (__ELECTRON__) {

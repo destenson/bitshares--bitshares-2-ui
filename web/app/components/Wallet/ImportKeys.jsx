@@ -1,23 +1,23 @@
-import React, {Component} from "react";
-import { connect } from "alt-react";
-import cname from "classnames";
-import notify from "actions/NotificationActions";
-import {PrivateKey, Aes, PublicKey, hash} from "bitsharesjs/es";
-import {ChainConfig} from "bitsharesjs-ws";
-import PrivateKeyStore from "stores/PrivateKeyStore";
-import WalletUnlockActions from "actions/WalletUnlockActions";
-import {WalletCreate} from "components/Wallet/WalletCreate";
-import LoadingIndicator from "components/LoadingIndicator";
-import Translate from "react-translate-component";
-import counterpart from "counterpart";
+import React, {Component} from 'react';
+import {connect} from 'alt-react';
+import cname from 'classnames';
+import notify from 'actions/NotificationActions';
+import {Aes, hash, PrivateKey, PublicKey} from 'bitsharesjs/es';
+import {ChainConfig} from 'bitsharesjs-ws';
+import PrivateKeyStore from 'stores/PrivateKeyStore';
+import WalletUnlockActions from 'actions/WalletUnlockActions';
+import {WalletCreate} from 'components/Wallet/WalletCreate';
+import LoadingIndicator from 'components/LoadingIndicator';
+import Translate from 'react-translate-component';
+import counterpart from 'counterpart';
 
-import BalanceClaimActive from "../Wallet/BalanceClaimActive";
-import BalanceClaimActiveActions from "actions/BalanceClaimActiveActions";
-import BalanceClaimAssetTotal from "components/Wallet/BalanceClaimAssetTotal";
-import WalletDb from "stores/WalletDb";
-import ImportKeysStore from "stores/ImportKeysStore";
+import BalanceClaimActive from '../Wallet/BalanceClaimActive';
+import BalanceClaimActiveActions from 'actions/BalanceClaimActiveActions';
+import BalanceClaimAssetTotal from 'components/Wallet/BalanceClaimAssetTotal';
+import WalletDb from 'stores/WalletDb';
+import ImportKeysStore from 'stores/ImportKeysStore';
 
-import GenesisFilter from "chain/GenesisFilter";
+import GenesisFilter from 'chain/GenesisFilter';
 
 require("./ImportKeys.scss");
 
